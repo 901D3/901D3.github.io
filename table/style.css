@@ -67,9 +67,9 @@
         src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/UbuntuMono-R.woff2") format("woff2");
         }
       @font-face {
-        font-family:"";
-        src: url("");
-        src: url("") format("woff2");
+        font-family:"UbuntuMonoRI";
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/UbuntuMono-RI.woff2");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/UbuntuMono-RI.woff2") format("woff2");
         }
       @font-face {
         font-family:"Trebuchet-MS";
