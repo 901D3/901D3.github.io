@@ -43,8 +43,8 @@
         }
       @font-face {
         font-family:"UbuntuRI";
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-RI.woff2?v=1702189168624");
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-RI.woff2?v=1702189168624") format("woff2")
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-RI.woff2");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-RI.woff2") format("woff2")
         }
       @font-face {
         font-family:"UbuntuTh";
