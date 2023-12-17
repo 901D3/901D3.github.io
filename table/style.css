@@ -13,18 +13,18 @@
         }
       @font-face {
         font-family:"UbuntuBoldItalic";
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-BI.woff2?v=1702189097972");
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-BI.woff2?v=1702189097972") format("woff2");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-BI.woff2");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-BI.woff2") format("woff2");
         }
       @font-face {
         font-family:"UbuntuLow";
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-L.woff2?v=1702189070240");
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-L.woff2?v=1702189070240") format("woff2");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-L.woff2");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-L.woff2") format("woff2");
         }
       @font-face {
         font-family:"UbuntuLowItalic";
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-LI.woff2?v=1702189111821");
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-LI.woff2?v=1702189111821") format("woff2");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-LI.woff2");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-LI.woff2") format("woff2");
         }
       @font-face {
         font-family:"UbuntuMedium";
