@@ -8,8 +8,8 @@
  */
       @font-face {
         font-family:"UbuntuBold";
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-B.woff?v=1702184883848");
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-B.woff?v=1702184883848") format("woff");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-B.woff2");
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-B.woff2") format("woff");
         }
       @font-face {
         font-family:"UbuntuBoldItalic";
@@ -78,8 +78,8 @@
         }
       @font-face {
         font-family:"Classwiz-CW";
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/cwcwd.woff2?v=1702470791680");
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/cwcwd.woff2?v=1702470791680") format("woff2");
+        src: url(https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Calculator font/Casio/Classwiz CW/cwcwd.woff2);
+        src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Calculator font/Casio/Classwiz CW/cwcwd.woff2") format("woff2");
         }
       @font-face {
         font-family:"";
