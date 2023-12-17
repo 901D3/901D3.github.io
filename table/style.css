@@ -1,4 +1,3 @@
-
 /***
  *       ____ ____ ____  
  *      / ___/ ___/ ___| 
@@ -7,8 +6,7 @@
  *      \____|____/____/ 
  *                       
  */
-
-        @font-face {
+      @font-face {
         font-family:"UbuntuBold";
         src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-B.woff?v=1702184883848");
         src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Ubuntu-B.woff?v=1702184883848") format("woff");
@@ -64,19 +62,24 @@
         src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/UbuntuMono-BI.woff2?v=1702189177238") format("woff2")
         }
       @font-face {
-        font-family:"Trebuchet MS";
+        font-family:"Trebuchet-MS";
         src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/trebuc.ttf?v=1702190846190");
         src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/trebuc.ttf?v=1702190846190") format("woff2");
         }
       @font-face {
-        font-family:"Trebuchet MS Italic";
+        font-family:"Trebuchet-MS-Italic";
         src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Trebuchet-MS-Italic.ttf?v=1702190853354");
         src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/Trebuchet-MS-Italic.ttf?v=1702190853354") format("woff2");
         }
       @font-face {
-        font-family:"abd";
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/cwcwd.woff2?v=1702336483385");
-        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/cwcwd.woff2?v=1702336483385") format("woff2");
+        font-family:"Classwiz-X";
+        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/cwxd.woff2?v=1702470798130");
+        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/cwxd.woff2?v=1702470798130") format("woff2");
+        }
+      @font-face {
+        font-family:"Classwiz-CW";
+        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/cwcwd.woff2?v=1702470791680");
+        src: url("https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/cwcwd.woff2?v=1702470791680") format("woff2");
         }
       @font-face {
         font-family:"";
@@ -368,27 +371,29 @@
         src: url("");
         src: url("") format("woff2");
         }
-      @font-face {
-        font-family:"";
-        src: url("");
-        src: url("") format("woff2");
+      body {
+        margin: auto;
+        color: white;
         }
- 
+      div.content {
+        display:flex;
+        justify-content: center;
+        width: inherit;
+        overflow:hidden;
+        }
       table,
       th,
       td {
         border: 3px solid white;
+        color: white;
         border-collapse: collapse;
         margin-left: auto;
         margin-right: auto;
       }
       th,
       td {
-        padding : 8px
+        padding : 8px;
           }
-      body {
-        color: white;
-        }
       h1.center {
         margin-left: auto;
         margin-right: auto;
@@ -436,4 +441,10 @@
       div.center {
         margin-left: auto;
         margin-right: auto;
+      }
+      img.center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 75%; 
       }
