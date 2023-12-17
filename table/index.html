@@ -13,10 +13,17 @@
  <head>
    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8" />
    <link rel="stylesheet" href="/table/style.css"/>
-   <link rel="stylesheet" href="pyscript/script.js">
-   <link rel="stylesheet" href="pyscript/core.css">
-   <script type="module" src="pyscript/core.js"></script>
+   <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
+   <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
    <title>Full CWI-CWX table</title>
+   <style>
+   .hlfontcwx {
+       font-family:Classwiz-X;
+       }
+     tr.hlfontcwxRow td:not(:first-child) {
+       font-family:Classwiz-X;
+       }
+     </style>
  </head>
   <body style="background-color: #772953">
     <h6 style="text-align: top-left;font-family:UbuntuR">
@@ -37,51 +44,52 @@
       <b>Note:</b><br>
       <b>s:shift</b><br>
       <b>alp/a:alpha</b><br>
-      <b>^ v &lt; &gt;:up,down,left,right</b><br>
-      <b>logab:log (logarit)</b><br>
-      <b>(∫.°-):∫ (integral)</b><br>
-      <b>[...]:text not operation or else</b><br>
-      <b>(...):bonus or else</b><br>
-      <b>{...}:...</b><br>
-      <b>Thank you for visit my website <span style="font-family:verdana;font-size:25px">.͜.</span></b></p>
+      <b>^ v &lt; &gt;:up,down,left,right<br>
+      logab:log (logarit)<br>
+      (∫.°-):∫ (integral)<br>
+      [...]:text not operation or else<br>
+      (...):bonus or else<br>
+      {...}:...<br>
+      Thank you for visit my website <span style="font-family:verdana;font-size:25px">.͜.</span></b></p>
     <table class="center" style="text-align:center;font-family:UbuntuMonoBold">
       <h3 style="text-align: center;font-family:UbuntuMonoBold"><b>Hex pointers</b></h3>
       <tr>
         <td style="font-size:18px"><b>Hex</b></td>
-        <td style="font-size:18px"><b>Pointer</b></td>
+        <td style="font-size:18px"><b>Pointer *</b></td>
         <td style="font-size:18px"><b>Operation</b></td>
       </tr>
       <tr>
         <td style="font-size:20px">0x3A</td>
-        <td style="font-size:25px"><b>A</b></td>
+        <td style="font-size:25px;font-family:Classwiz-X"><b>A</b></td>
         <td>S 7 3 7</td>
       </tr>
       <tr>
         <td style="font-size:20px">0x3B</td>
-        <td style="font-size:25px"><b>B</b></td>
+        <td style="font-size:25px;font-family:Classwiz-X"><b>B</b></td>
         <td>S 7 3 8</td>
       </tr>
       <tr>
         <td style="font-size:20px">0x3C</td>
-        <td style="font-size:25px"><b>C</b></td>
+        <td style="font-size:25px;font-family:Classwiz-X"><b>C</b></td>
         <td>S 7 3 9</td>
       </tr>
       <tr>
         <td style="font-size:20px">0x3D</td>
-        <td style="font-size:25px"><b>D</b></td>
+        <td style="font-size:25px;font-family:Classwiz-X"><b>D</b></td>
         <td>S 7 3 (-)</td>
       </tr>
       <tr>
         <td style="font-size:20px">0x3E</td>
-        <td style="font-size:25px"><b>E</b></td>
+        <td style="font-size:25px;font-family:Classwiz-X"><b>E</b></td>
         <td>S 7 3 °°°</td>
       </tr>
       <tr>
         <td style="font-size:20px">0x3F</td>
-        <td style="font-size:25px"><b>F</b></td>
+        <td style="font-size:25px;font-family:Classwiz-X"><b>F</b></td>
         <td>S 7 3 x<sup>-1</sup></td>
       </tr>
     </table>
+    <p style="font-family:UbuntuBold;text-align:center">*:may be bolder when try in calculator</p>
     <h1 style="text-align: center">
       ______________________________
     </h1>
@@ -298,128 +306,128 @@
      </tr>
      <tr>
        <td>63</td>
-       <td>c</td>
-       <td>R(</td>
+       <td style="font-family:Classwiz-X">c</td>
+       <td style="font-family:Classwiz-X">R(</td>
        <td>[Put hex]</td>
        <td></td>
        <td>72</td>
-       <td>r</td>
-       <td><i><b>e</b></i>^(</td>
+       <td style="font-family:Classwiz-X">r</td>
+       <td style="font-family:Classwiz-X"><i><b>e</b></i>^(</td>
        <td>S ln</td>
      </tr>
      <tr>
        <td>64</td>
-       <td>d</td>
-       <td>Not(</td>
+       <td style="font-family:Classwiz-X">d</td>
+       <td style="font-family:Classwiz-X">Not(</td>
        <td>[Put hex]</td>
        <td></td>
        <td>73</td>
-       <td>s</td>
-       <td><b>10</b>^(</td>
+       <td style="font-family:Classwiz-X">s</td>
+       <td style="font-family:Classwiz-X"><b>10</b>^(</td>
        <td>S log</td>
      </tr>
      <tr>
        <td>65</td>
-       <td>e</td>
-       <td>Neg(</td>
+       <td style="font-family:Classwiz-X">e</td>
+       <td style="font-family:Classwiz-X">Neg(</td>
        <td>[Put hex]</td>
        <td></td>
        <td>74</td>
-       <td>t</td>
-       <td>√(</td>
+       <td style="font-family:Classwiz-X">t</td>
+       <td style="font-family:Classwiz-X">√(</td>
        <td>√</td>
      </tr>
      <tr>
        <td>66</td>
-       <td>f</td>
-       <td>Conjg(</td>
+       <td style="font-family:Classwiz-X">f</td>
+       <td style="font-family:Classwiz-X">Conjg(</td>
        <td>[Put hex]</td>
        <td></td>
        <td>75</td>
-       <td>u</td>
-       <td>ln(</td>
+       <td style="font-family:Classwiz-X">u</td>
+       <td style="font-family:Classwiz-X">ln(</td>
        <td>ln</td>
      </tr>
      <tr>
        <td>67</td>
-       <td>g</td>
-       <td>Arg(</td>
+       <td style="font-family:Classwiz-X">g</td>
+       <td style="font-family:Classwiz-X">Arg(</td>
        <td>[Put hex]</td>
        <td></td>
        <td>76</td>
-       <td>v</td>
-       <td><sup>3</sup>√(</td>
+       <td style="font-family:Classwiz-X">v</td>
+       <td style="font-family:Classwiz-X"><sup>3</sup>√(</td>
        <td>S √</td>
      </tr>
      <tr>
        <td>68</td>
-       <td>h</td>
-       <td>Abs(</td>
+       <td style="font-family:Classwiz-X">h</td>
+       <td style="font-family:Classwiz-X">Abs(</td>
        <td>S (</td>
        <td></td>
        <td>77</td>
-       <td>w</td>
-       <td>sin</td>
+       <td style="font-family:Classwiz-X">w</td>
+       <td style="font-family:Classwiz-X">sin</td>
        <td>sin</td>
      </tr>
      <tr>
        <td>69</td>
-       <td>i</td>
-       <td>Rnd(</td>
+       <td style="font-family:Classwiz-X">i</td>
+       <td style="font-family:Classwiz-X">Rnd(</td>
        <td>S 0</td>
        <td></td>
        <td>78</td>
-       <td>x</td>
-       <td>cos</td>
+       <td style="font-family:Classwiz-X">x</td>
+       <td style="font-family:Classwiz-X">cos</td>
        <td>cos</td>
      </tr>
      <tr>
        <td>6A</td>
-       <td>j</td>
-       <td>Det(</td>
+       <td style="font-family:Classwiz-X">j</td>
+       <td style="font-family:Classwiz-X">Det(</td>
        <td>[Put hex]</td>
        <td></td>
        <td>79</td>
-       <td>y</td>
-       <td>tan</td>
+       <td style="font-family:Classwiz-X">y</td>
+       <td style="font-family:Classwiz-X">tan</td>
        <td>tan</td>
      </tr>
      <tr>
        <td>6B</td>
-       <td>k</td>
-       <td>Trn(</td>
+       <td style="font-family:Classwiz-X">k</td>
+       <td style="font-family:Classwiz-X">Trn(</td>
        <td>[Put hex]</td>
        <td></td>
        <td>7A</td>
-       <td>z</td>
-       <td>sin<sup>-1</sup>(</td>
+       <td style="font-family:Classwiz-X">z</td>
+       <td style="font-family:Classwiz-X">sin<sup>-1</sup>(</td>
        <td>S sin</td>
      </tr>
      <tr>
        <td>6C</td>
-       <td>l</td>
-       <td>sinh(</td>
+       <td style="font-family:Classwiz-X">l</td>
+       <td style="font-family:Classwiz-X">sinh(</td>
        <td>OPTN 1 1</td>
        <td></td>
      </tr>
      <tr>
        <td>6D</td>
-       <td>m</td>
-       <td>cosh(</td>
+       <td style="font-family:Classwiz-X">m</td>
+       <td style="font-family:Classwiz-X">cosh(</td>
        <td>OPTN 1 2</td>
        <td></td>
      </tr>
      <tr>
        <td>6E</td>
-       <td>n</td>
-       <td>tanh(</td>
+       <td style="font-family:Classwiz-X">n</td>
+       <td style="font-family:Classwiz-X">tanh(</td>
        <td>OPTN 1 3</td>
        <td></td>
      </tr>
      <tr>
        <td>6F</td>
-       <td>o</td>
-       <td>sinh<sup>-1</sup>(</td>
+       <td style="font-family:Classwiz-X">o</td>
+       <td style="font-family:Classwiz-X">sinh<sup>-1</sup>(</td>
        <td>OPTN 1 4</td>
        <td></td>
      </tr>
@@ -451,10 +459,10 @@
         <th>F</th>
       </tr>
      </thead>
-      <tr>
+      <tr class="hlfontcwxRow">
         <td>0</td>
-        <td>[null]</td>
-        <td>[⅓]</td>
+        <td>*</td>
+        <td>**</td>
         <td>@</td>
         <td>@</td>
         <td>@</td>
@@ -470,7 +478,7 @@
         <td>@</td>
         <td>@</td>
       </tr>
-      <tr>
+      <tr class="hlfontcwxRow">
         <td>1</td>
         <td>@</td>
         <td>@</td>
@@ -481,7 +489,7 @@
         <td>@</td>
         <td>@</td>
         <td>@</td>
-        <td>▯</td>
+        <td style="font-family: Impact,sans-serif; font-size: 20px">▯</td>
         <td>@</td>
         <td>@</td>
         <td>@</td>
@@ -489,35 +497,24 @@
         <td>@</td>
         <td>@</td>
       </tr>
-      <tr>
+      <tr class="hlfontcwxRow">
         <td>2</td>
         <td><i>i</i></td>
         <td><i>e</i></td>
         <td style="font-family: courier new"><i>π</i></td>
         <td>:</td>
         <td><b>$</b></td>
-        <td>?</td>
-        <td>@</td>
-        <td>@</td>
-        <td>@</td>
-        <td>@</td>
-        <td>@</td>
-        <td>@</td>
-        <td>,</td>
-        <td><sub>×</sub>10</td>
-        <td>.</td>
-        <td>@</td>
       </tr>
-      <tr>
+      <tr class="hlfontcwxRow">
         <td>3</td>
       </tr>
-      <tr>
+      <tr class="hlfontcwxRow">
         <td>4</td>
       </tr>
-      <tr>
+      <tr class="hlfontcwxRow">
         <td>5</td>
       </tr>
-      <tr>
+      <tr class="hlfontcwxRow">
         <td>6</td>
       </tr>
       <tr>
@@ -552,13 +549,13 @@
       Output/2 level chars table<br></h3>
      <h2 style="font-family:UbuntuBold;text-align:center;font-size:30px">
       0x10-&gt;0xEC:Basic Latin and math punctuations
-      <img class="center" src="https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/IMG_20231116_124819.jpg?v=1702470671791" width="575px" height="475px"><br>
+      <img class="center" src="https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/IMG_20231116_124819.jpg?v=1702470671791"><br>
    <p style="font-size:15px"> And also preview of 0xF___ tables(please note that every 0xF___ only exclusive for specific countries)</p>
         0xF010-&gt;0xF031: Japanese conversion units<br>
-      <img class="center" src="https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/IMG_20231116_124843.jpg?v=1702470686178" width="575px" height="175px"><br>
+      <img class="center" src="https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/IMG_20231116_124843.jpg?v=1702470686178"><br>
         0xF110-&gt;0xF1EE: Chinese characters<br>
-      <img class="center" src="https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/IMG_20231116_124907.jpg?v=1702470720612" width="625px" height="485px"><br>
-      </h2>
+      <img class="center" src="https://cdn.glitch.global/de30bc39-21c4-407f-9d22-09711e88ebe8/IMG_20231116_124907.jpg?v=1702470720612"><br>
+        </h2>
   </body>
 </html>
 
