@@ -642,6 +642,9 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
 
   function hideTooltip(element) {
     var tooltip = element.querySelector('.tooltip');
+    var m;
+      m=document.getElementById('myTooltip');m.style.display="none";
+      }
     if (tooltip) {
       tooltip.style.display = 'none';
     }
