@@ -4,8 +4,60 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="https://901D3.github.io/styles/style.css">
     <title>901D3&prime;s assets site</title>
+    <style>
+        /* Add some basic styling */
+        body {
+            font-family: UbuntuMonoBold;
+            background-color: #2a2a2a;
+            color: white;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        a {
+            text-decoration: none;
+            color: #007bff;
+            cursor: pointer;
+        }
+    </style>
   </head>
   <body>
-    
-  </body>
+    <div id="folderBrowser">
+    <h2>Folder Browser</h2>
+    <ul id="folderList"></ul>
+</div>
+
+<script>
+    folderData = fetchFolderContents(path);
+  
+    // Function to render the folder list
+    function renderFolderList() {
+        const folderList = document.getElementById('folderList');
+        folderList.innerHTML = ''; // Clear existing content
+
+        folderData.forEach(folder => {
+            const listItem = document.createElement('li');
+            const link = document.createElement('a');
+            link.textContent = folder.name;
+            link.onclick = () => openFolder(folder.path);
+            listItem.appendChild(link);
+            folderList.appendChild(listItem);
+        });
+    }
+
+    // Function to open a folder
+    function openFolder(path) {
+        // You can implement logic here to fetch folder contents from the server
+        console.log('Opening folder:', path);
+        // For demonstration purposes, you can update folderData with the contents of the selected folder
+        // and then call renderFolderList() again.
+        // Example: folderData = fetchFolderContents(path);
+    }
+    renderFolderList();
+</script>
+</body>
 </html>
