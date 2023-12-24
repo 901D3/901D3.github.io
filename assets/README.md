@@ -1,5 +1,5 @@
 # A simple file browser using Electron, Vue.js and Photon
-
+# By UrosNikolic
 A simple desktop app used for browsing your local hard disk and showing the contents of a file or displaying an image
 
 [Link to article on my blog explaining how this app was built.](https://urosnikolic.com/creating-a-simple-file-browser-using-electron-vue-js-and-photon/)
@@ -17,3 +17,4 @@ node -v 8+
 
 ![Alt text](./docs/images/browse-image.png?raw=true "Title")
 ![Alt text](./docs/images/browse-file.png?raw=true "Title")
+
