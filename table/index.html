@@ -11,17 +11,37 @@
 -->
 <html>
  <head>
-   <meta  name="viewport" http-equiv="CONTENT-TYPE" content="text/html; width=device-width, initial-scale=0.55;charset=UTF-8" />
+   <meta name="viewport" http-equiv="CONTENT-TYPE" content="text/html; width=device-width, initial-scale=0.35;charset=UTF-8" />
    <link rel="stylesheet" href="https://901d3.glitch.me/styles/style.css"/>
    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
    <title>Full CWI-CWX table</title>
    <style>
+      table,
+      th,
+      td {
+        border: 3px solid white;
+        color: white;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      th,
+      td {
+        padding : 12px;
+          }
    .hlfontcwx {
        font-family:Classwiz-X;
        }
      tr.hlfontcwxRow td:not(:first-child) {
        font-family:Classwiz-X;
+       }
+     tr.hlfontcwxtableFA td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)) {
+       font-family: Classwiz-X;
        }
      .tooltip {
       position: absolute;
@@ -34,7 +54,14 @@
  </head>
   <body style="background-color: #772953">
     <h6 style="text-align: top-left;font-family:UbuntuR">
-      page color:Canonical Aubergine<br>
+      background-color:Canonical Aubergine[#772953]<br>
+      &lt;meta<br>
+      metaname="viewport"<br>
+      http-equiv="CONTENT-TYPE"<br>
+      content="text/html;<br>
+      width=device-width,<br>
+      initial-scale=0.35;<br>
+      charset=UTF-8"/&gt;<br>
       Document site<br>
     </h6>
     <h1 style="text-align: center;font-size: 75px;font-family:UbuntuR">
@@ -45,11 +72,11 @@
       <b>s:shift</b><br>
       <b>alp/a:alpha</b><br>
       <b>^ v &lt; &gt;:up,down,left,right<br>
-      logab:log (logarit)<br>
-      (∫.°-):∫ (integral)<br>
-      [...]:text not operation or else<br>
-      (...):bonus or else<br>
-      {...}:...<br>
+      logab:log (logarithm)<br>
+      (…)<br>
+      […]<br>
+      {…}<br>
+      &lt;…&gt;<br>
       Thank you for visit my website <span style="font-family:verdana;font-size:25px">.͜.</span></b></p>
     <table class="center" style="text-align:center;font-family:UbuntuMonoBold">
       <h3 style="text-align: center;font-family:UbuntuMonoBold"><b>Hex pointers</b></h3>
@@ -431,7 +458,7 @@
     <h1 style="text-align: center">
       ______________________________
     </h1>
-    <table class="center" style="text-align:center;font-size:8px;font-family:UbuntuMonoBold">
+    <table style="text-align:center;font-size:14px;font-family:UbuntuMonoBold">
       <h3 style="text-align:center;font-family:UbuntuMonoBold">0x00__ Table<br>
       Input/1 level chars table<br></h3>
      <thead>
@@ -824,7 +851,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
      </h2>
     <h3 style="font-family:UbuntuBold;text-align:center">src:<a href="https://cwh.caduo.eu.org">cwh.caduo.eu.org</a> changed domain name to <a href="https://h.20142022.xyz">h.20142022.xyz</a>, original created by Happy sheep.   
     </h3>
-    <table class="center" style="text-align:center;font-size:8px;font-family:UbuntuMonoBold">
+    <table class="center" style="text-align:center;font-size:20px;font-family:UbuntuMonoBold;padding:20px">
      <h3 style="text-align:center;font-family:UbuntuMonoBold">0xFA__ Table</h3>
        <tr>
         <th>Hex</th>
@@ -839,7 +866,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
         <th>Hex</th>
         <th>Display</th>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA00</td>
          <td></td>
          <td></td>
@@ -852,7 +879,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA30</td>
          <td>畝▶反</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA01</td>
          <td>ch▶yd</td>
          <td></td>
@@ -865,7 +892,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA31</td>
          <td>町▶反</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA02</td>
          <td>yd▶ch</td>
          <td></td>
@@ -878,7 +905,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA32</td>
          <td>反▶町</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA03</td>
          <td>ch▶mile</td>
          <td></td>
@@ -891,7 +918,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA33</td>
          <td>合▶升</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA04</td>
          <td>mile▶ch</td>
          <td></td>
@@ -904,7 +931,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA34</td>
          <td>升▶合</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA05</td>
          <td>mil▶in</td>
          <td></td>
@@ -917,7 +944,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA35</td>
          <td>斗▶升</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA06</td>
          <td>in▶mil</td>
          <td></td>
@@ -930,7 +957,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA36</td>
          <td>升▶斗</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA07</td>
          <td>fath▶in</td>
          <td></td>
@@ -943,7 +970,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA37</td>
          <td>石▶斗</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA08</td>
          <td>in▶fath</td>
          <td></td>
@@ -956,7 +983,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA38</td>
          <td>斗▶石</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA09</td>
          <td>fath▶ft</td>
          <td></td>
@@ -969,7 +996,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA39</td>
          <td>勺▶合</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA0A</td>
          <td>ft▶fath</td>
          <td></td>
@@ -982,7 +1009,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA3A</td>
          <td>合▶勺</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA0B</td>
          <td>fath▶yd</td>
          <td></td>
@@ -995,7 +1022,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA3B</td>
          <td>匁▶貫</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA0C</td>
          <td>yd▶fath</td>
          <td></td>
@@ -1008,7 +1035,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA3C</td>
          <td>貫▶匁</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA0D</td>
          <td>ha▶a</td>
          <td></td>
@@ -1021,7 +1048,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA3D</td>
          <td>斤▶貫</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA0E</td>
          <td>a▶ha</td>
          <td></td>
@@ -1034,10 +1061,10 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA3E</td>
          <td>貫▶斤</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td>FA0F</td>
          <td>mile²▶acre</td>
-         <td>acre▶mile²</td>
+         <td></td>
          <td>FA1F</td>
          <td>間▶尺</td>
          <td></td>
@@ -1047,7 +1074,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>FA3F</td>
          <td>斤▶匁</td>
        </tr>
-       <tr>
+       <tr class="hlfontcwxtableFA">
          <td></td>
          <td></td>
          <td></td>
@@ -1061,6 +1088,6 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>匁▶斤</td>
        </tr>
     </table>
-    <h5 style="font-family:UbuntuBold;text-align:centrr">All 0x0000 to 0x____ generated with user's tools by user202729, gwetm.</h5>
-    </body>
+    <h5 style="font-family:UbuntuBold;text-align:center">All 0x0000 to 0x____ generated with user's tools by user202729, gwetm.</h5>
+  </body>
 </html>
