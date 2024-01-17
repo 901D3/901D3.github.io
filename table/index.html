@@ -11,13 +11,24 @@
 -->
 <html>
  <head>
-   <meta name="viewport" http-equiv="CONTENT-TYPE" content="text/html; width=device-width, initial-scale=0.35;charset=UTF-8" />
+   <meta name="viewport" http-equiv="CONTENT-TYPE" content="text/html; width=device-width, initial-scale=0.60;charset=UTF-8" />
    <link rel="stylesheet" href="https://901d3.glitch.me/styles/style.css"/>
    <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
    <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
    <title>Full CWI-CWX table</title>
    <style>
-      table,
+     body {
+  width: 170%;
+}
+
+@media only screen and (max-width: 768px) {
+  body {
+    width: auto;
+    font-size: 45px;
+    padding: 5px;
+  }
+}  
+     table,
       th,
       td {
         border: 3px solid white;
@@ -56,12 +67,15 @@
     <h6 style="text-align: top-left;font-family:UbuntuR">
       background-color:Canonical Aubergine[#772953]<br>
       &lt;meta<br>
-      metaname="viewport"<br>
+      name="viewport"<br>
       http-equiv="CONTENT-TYPE"<br>
       content="text/html;<br>
       width=device-width,<br>
-      initial-scale=0.35;<br>
+      initial-scale=0.60;<br>
       charset=UTF-8"/&gt;<br>
+      body {<br>
+       width: 170%;<br>
+      }<br>
       Document site<br>
     </h6>
     <h1 style="text-align: center;font-size: 75px;font-family:UbuntuR">
@@ -143,7 +157,7 @@
         <td></td>
         <td>50</td>
         <td style="font-family:Classwiz-X">P</td>
-        <td style="font-family:Classwiz-X">Σ(</td>
+        <td style="font-family:Classwiz-X">∑(</td>
         <td>s (x)</td>
       </tr>
       <tr>
@@ -165,7 +179,7 @@
         <td></td>
         <td>52</td>
         <td style="font-family:Classwiz-X">R</td>
-        <td style="font-family:Classwiz-X">d/dx(</td>
+        <td style="font-family:Classwiz-X">d/d𝒙(</td>
         <td>s ∫.°-</td>
       </tr>
       <tr>
@@ -176,7 +190,7 @@
         <td></td>
         <td>53</td>
         <td style="font-family:Classwiz-X">S</td>
-        <td style="font-family:Classwiz-X">Π(</td>
+        <td style="font-family:Classwiz-X">∏(</td>
         <td>Alp x</td>
       </tr>
       <tr>
@@ -215,7 +229,7 @@
       <tr>
         <td>48</td>
         <td style="font-family:Classwiz-X">H</td>
-        <td style="font-family:Classwiz-X">x</td>
+        <td style="font-family:Classwiz-X">𝒙</td>
         <td>x</td>
         <td></td>
         <td>57</td>
@@ -226,7 +240,7 @@
       <tr>
         <td>49</td>
         <td style="font-family:Classwiz-X">I</td>
-        <td style="font-family:Classwiz-X">y</td>
+        <td style="font-family:Classwiz-X">𝒚</td>
         <td>Alp )</td>
         <td></td>
         <td>58</td>
@@ -248,8 +262,8 @@
       <tr>
         <td>4B</td>
         <td style="font-family:Classwiz-X">K</td>
-        <td style="font-family:Classwiz-X">@</td>
-        <td>S 7 4 6</td>
+        <td style="font-family:Classwiz-X">𝒛</td>
+        <td>A S=&gt;D</td>
         <td></td>
         <td>5A</td>
         <td style="font-family:Classwiz-X">Z</td>
@@ -259,7 +273,7 @@
       <tr>
         <td>4C</td>
         <td style="font-family:Classwiz-X">L</td>
-        <td style="font-family:Classwiz-X">@</td>
+        <td style="font-family:Classwiz-X">𝜃</td>
         <td>S 7 1 3</td>
         <td></td>
       </tr>
@@ -512,7 +526,7 @@
         <td>@</td>
         <td>@</td>
         <td>@</td>
-        <td style="font-family: Impact,sans-serif; font-size: 20px">▯</td>
+        <td></td>
         <td>@</td>
         <td>@</td>
         <td>@</td>
@@ -522,9 +536,9 @@
       </tr>
       <tr class="hlfontcwxRow">
         <td>2</td>
-        <td><b>𝒊</b></td>
-        <td><b>𝒆</b></td>
-        <td><b>𝜋</b></td>
+        <td>𝒊</td>
+        <td>𝒆</td>
+        <td>𝜋</td>
         <td>:</td>
         <td>$</td>
         <td>?</td>
@@ -535,7 +549,7 @@
         <td>@</td>
         <td>@</td>
         <td>,</td>
-        <td>×<b>10</b></td>
+        <td></td>
         <td>.</td>
         <td>@</td>
       </tr>
@@ -551,12 +565,12 @@
         <td>7</td>
         <td>8</td>
         <td>9</td>
-        <td><b>A</b></td>
-        <td><b>B</b></td>
-        <td><b>C</b></td>
-        <td><b>D</b></td>
-        <td><b>E</b></td>
-        <td><b>F</b></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
       </tr>
       <tr class="hlfontcwxRow">
         <td>4</td>
@@ -568,21 +582,21 @@
         <td>D</td>
         <td>E</td>
         <td>F</td>
-        <td><b>𝒙</b></td>
-        <td><b>𝒚</b></td>
+        <td>𝒙</td>
+        <td>𝒚</td>
         <td>PreAns</td>
-        <td><b>𝒛</b></td>
-        <td><b>𝜃</b></td>
+        <td>𝒛</td>
+        <td>𝜃</td>
         <td>@ *</td>
         <td>@ **</td>
         <td>@ ***</td>
       </tr>
       <tr class="hlfontcwxRow">
         <td>5</td>
-        <td>Σ(</td>
+        <td>∑(</td>
         <td>∫(</td>
-        <td>d/d<b>𝒙</b>(</td>
-        <td>Π(</td>
+        <td>d/d𝒙(</td>
+        <td>∏(</td>
         <td>@</td>
         <td>@</td>
         <td>@</td>
@@ -619,8 +633,8 @@
         <td>7</td>
         <td>cosh<sup>-1</sup>(</td>
         <td>tanh<sup>-1</sup>(</td>
-        <td><b>𝒆</b>^(</td>
-        <td><b>10</b>^(</td>
+        <td>𝒆^(</td>
+        <td>^(</td>
         <td>√(</td>
         <td>ln(</td>
         <td><sup>3</sup>√(</td>
@@ -686,9 +700,9 @@
         <td>÷</td>
         <td>÷R</td>
         <td>•</td>
-        <td><b>∠</b></td>
-        <td><b>P</b></td>
-        <td><b>C</b></td>
+        <td>∠</td>
+        <td></td>
+        <td></td>
         <td>@</td>
       </tr>
       <tr class="hlfontcwxRow">
@@ -701,10 +715,10 @@
         <td>@</td>
         <td>@</td>
         <td>@</td>
-        <td>x ̂</td>
-        <td>y ̂</td>
-        <td>x ̂1</td>
-        <td>x ̂2</td>
+        <td></td>
+        <td></td>
+        <td>₁</td>
+        <td>₂</td>
         <td>@</td>
         <td>@</td>
         <td>@</td>
@@ -733,8 +747,8 @@
         <td>D</td>
         <td>)</td>
         <td>▶t</td>
-        <td>▶a+b<b>𝒊</b></td>
-        <td>▶r<b>∠</b><b>𝜃</b></td>
+        <td>▶a+b𝒊</td>
+        <td>▶r∠𝜃</td>
         <td><sup>-1</sup></td>
         <td><sup>2</sup></td>
         <td><sup>3</sup></td>
@@ -743,21 +757,21 @@
         <td>°</td>
         <td><sup>r</sup></td>
         <td><sup>g</sup></td>
-        <td><sup>▫</sup></td>
-        <td><b>E</b></td>
-        <td><b>P</b></td>
-        <td><b>T</b></td>
+        <td></td>
+        <td>𝐄</td>
+        <td>𝐏</td>
+        <td>𝐓</td>
       </tr>
       <tr class="hlfontcwxRow">
-        <td>E</td>
-        <td><b>G</b></td>
-        <td><b>M</b></td>
-        <td><b>k</b></td>
-        <td><b>m</b></td>
-        <td><i><b>µ</b></i></td>
-        <td><b>n</b></td>
-        <td><b>p</b></td>
-        <td><b>f</b></td>
+        <td>D</td>
+        <td>𝐆</td>
+        <td>𝐌</td>
+        <td>𝐤</td>
+        <td>𝐦</td>
+        <td>𝝁</td>
+        <td>𝐧</td>
+        <td>𝐩</td>
+        <td>𝐟</td>
         <td>@</td>
         <td>▶Simp</td>
         <td>@</td>
@@ -786,7 +800,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
     // Check if the event target is a table cell
     if (target.tagName.toLowerCase() === 'td') {
       var row = target.parentNode.rowIndex - 1; // Row index is zero-based
-      var col = target.cellIndex - 1; // Cell index is zero-based
+      var col = target.cellIndex - 1;
       var text = target.textContent;
       showTooltip(target, `R: ${getHex(row)}, C: ${getHex(col)}, T: ${text}`);
     }
@@ -867,8 +881,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
         <th>Display</th>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA00</td>
-         <td></td>
+         <td>FA01</td>
+         <td>ch▶yd</td>
          <td></td>
          <td>FA10</td>
          <td>acre▶mile<sup>2</sup></td>
@@ -880,8 +894,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>畝▶反</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA01</td>
-         <td>ch▶yd</td>
+         <td>FA02</td>
+         <td>yd▶ch</td>
          <td></td>
          <td>FA11</td>
          <td>bu▶gal(UK)</td>
@@ -893,8 +907,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>町▶反</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA02</td>
-         <td>yd▶ch</td>
+         <td>FA03</td>
+         <td>ch▶mile</td>
          <td></td>
          <td>FA12</td>
          <td>gal(UK)▶bu</td>
@@ -906,8 +920,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>反▶町</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA03</td>
-         <td>ch▶mile</td>
+         <td>FA04</td>
+         <td>mile▶ch</td>
          <td></td>
          <td>FA13</td>
          <td>lb▶oz</td>
@@ -919,8 +933,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>合▶升</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA04</td>
-         <td>mile▶ch</td>
+         <td>FA05</td>
+         <td>mil▶in</td>
          <td></td>
          <td>FA14</td>
          <td>oz▶lb</td>
@@ -932,8 +946,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>升▶合</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA05</td>
-         <td>mil▶in</td>
+         <td>FA06</td>
+         <td>in▶mil</td>
          <td></td>
          <td>FA15</td>
          <td>ton(long)▶oz</td>
@@ -945,8 +959,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>斗▶升</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA06</td>
-         <td>in▶mil</td>
+         <td>FA07</td>
+         <td>fath▶in</td>
          <td></td>
          <td>FA16</td>
          <td>oz▶ton(long)</td>
@@ -958,8 +972,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>升▶斗</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA07</td>
-         <td>fath▶in</td>
+         <td>FA08</td>
+         <td>in▶fath</td>
          <td></td>
          <td>FA17</td>
          <td>ton(long)▶lb</td>
@@ -971,8 +985,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>石▶斗</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA08</td>
-         <td>in▶fath</td>
+         <td>FA09</td>
+         <td>fath▶ft</td>
          <td></td>
          <td>FA18</td>
          <td>lb▶ton(long)</td>
@@ -984,8 +998,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>斗▶石</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA09</td>
-         <td>fath▶ft</td>
+         <td>FA0A</td>
+         <td>ft▶fath</td>
          <td></td>
          <td>FA19</td>
          <td>ton(short)▶oz</td>
@@ -997,8 +1011,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>勺▶合</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA0A</td>
-         <td>ft▶fath</td>
+         <td>FA0B</td>
+         <td>fath▶yd</td>
          <td></td>
          <td>FA1A</td>
          <td>oz▶ton(short)</td>
@@ -1010,8 +1024,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>合▶勺</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA0B</td>
-         <td>fath▶yd</td>
+         <td>FA0C</td>
+         <td>yd▶fath</td>
          <td></td>
          <td>FA1B</td>
          <td>ton(short)▶lb</td>
@@ -1023,8 +1037,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>匁▶貫</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA0C</td>
-         <td>yd▶fath</td>
+         <td>FA0D</td>
+         <td>ha▶a</td>
          <td></td>
          <td>FA1C</td>
          <td>lb▶ton(short)</td>
@@ -1036,8 +1050,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>貫▶匁</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA0D</td>
-         <td>ha▶a</td>
+         <td>FA0E</td>
+         <td>a▶ha</td>
          <td></td>
          <td>FA1D</td>
          <td>寸▶尺</td>
@@ -1049,8 +1063,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>斤▶貫</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA0E</td>
-         <td>a▶ha</td>
+         <td>FA0F</td>
+         <td>mile²▶acre</td>
          <td></td>
          <td>FA1E</td>
          <td>尺▶寸</td>
@@ -1062,10 +1076,7 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td>貫▶斤</td>
        </tr>
        <tr class="hlfontcwxtableFA">
-         <td>FA0F</td>
-         <td>mile²▶acre</td>
-         <td></td>
-         <td>FA1F</td>
+        <td>FA1F</td>
          <td>間▶尺</td>
          <td></td>
          <td>FA2F</td>
@@ -1073,20 +1084,25 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
          <td></td>
          <td>FA3F</td>
          <td>斤▶匁</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
          <td>FA40</td>
          <td>匁▶斤</td>
        </tr>
+    </table>
+    <h3 style="text-align:center;font-family:UbuntuMonoBold">0xFB__ Table</h3>
+    <table>
+      <tr>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <td></td>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+      </tr>
     </table>
     <h5 style="font-family:UbuntuBold;text-align:center">All 0x0000 to 0x____ generated with user's tools by user202729, gwetm.</h5>
   </body>
