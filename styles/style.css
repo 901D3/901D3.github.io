@@ -6,6 +6,7 @@
  *      \____|____/____/ 
  *                       
  */
+
       @font-face {
         font-family:"UbuntuBold";
         src: url("https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/font/Ubuntu/woff2/Ubuntu-B.woff2");
@@ -372,8 +373,11 @@
         src: url("") format("woff2");
         }
       body {
+        text-align: center;
         margin: auto;
         color: white;
+        margin-left: auto;
+        margin-right: auto;
         }
       div.content {
         display:flex;
@@ -381,64 +385,63 @@
         width: inherit;
         overflow:hidden;
         }
-      table,
-      th,
-      td {
-        border: 3px solid white;
-        color: white;
-        border-collapse: collapse;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      th,
-      td {
-        padding : 10px;
-          }
       h1.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       h2.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       h3.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       h4.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       h5.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       h6.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       table.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       tr.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       th.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       td.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       p.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
       div.center {
+        text-align: center;
         margin-left: auto;
         margin-right: auto;
       }
@@ -446,5 +449,6 @@
         display: block;
         margin-left: auto;
         margin-right: auto;
-        width: 75%; 
+        width: auto;
+        height:auto;
       }
