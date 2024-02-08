@@ -10,28 +10,48 @@
 
 -->
 <html>
- <head>
-   <meta name="viewport" http-equiv="CONTENT-TYPE" content="text/html; width=device-width, initial-scale=0.50;charset=UTF-8" />
-   <link rel="stylesheet" href="https://901d3.glitch.me/styles/style.css"/>
-   <link rel="stylesheet" href="https://pyscript.net/releases/2023.11.1/core.css" />
-   <script type="module" src="https://pyscript.net/releases/2023.11.1/core.js"></script>
-   <title>Full CWI-CWX table</title>
-   <style>
-     body {
-       width: 170%;
-        }
-    @media only screen and (max-width: 480px) {
+  <head>
+    <meta
+      name="viewport"
+      http-equiv="CONTENT-TYPE"
+      content="text/html; width=device-width, initial-scale=0.50;charset=UTF-8"
+    />
+    <link rel="stylesheet" href="https://901d3.glitch.me/styles/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pyscript.net/releases/2023.11.1/core.css"
+    />
+    <script
+      type="module"
+      src="https://pyscript.net/releases/2023.11.1/core.js"
+    ></script>
+    <title>Full CWI-CWX table</title>
+    <style>
       body {
-       width: auto;
-       font-size: 45px;
-       padding: 5px;
+        background-color: #eaeaea;
+        color: #000000;
+        transition: background-color 0.5s, color 0.5s;
+        width: 170%;
+      }
+      .dark-mode {
+        background-color: #212121;
+        color: #ffffff;
+      }
+      @media only screen and (max-width: 480px) {
+        body {
+          width: auto;
+          font-size: 45px;
+          padding: 5px;
         }
-      }  
-     table,
+      }
+      .table-light {
+        background-color: #ffffff;
+        color: #000000;
+      }
+      table,
       th,
       td {
-        border: 3px solid white;
-        color: white;
+        border: 3px solid;
         border-collapse: collapse;
         margin-left: auto;
         margin-right: auto;
@@ -42,115 +62,159 @@
       }
       th,
       td {
-        padding : 12px;
-          }
-   .hlfontcwx {
-       font-family:Classwiz-X;
-       }
-     tr.hlfontcwxRow td:not(:first-child) {
-       font-family:Classwiz-X;
-       }
-     tr.hlfontcwxtableFA td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)) {
-       font-family: Classwiz-X;
-       }
-     tr.hlfontcwxtableFB td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)) {
-       font-family: Classwiz-X;
-     }
-     tr.hlfontcwxtableFD td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)):not(:nth-child(15)):not(:nth-child(16)) {
-       font-family: Classwiz-X;
-     }
-     .tooltip {
-      position: absolute;
-      background-color: #000000;
-      padding: 5px;
-      border: 2px solid yellow;
-      display: none;
-    }
+        padding: 12px;
+      }
+      .hlfontcwx {
+        font-family: Classwiz-X;
+      }
+      tr.hlfontcwxRow td:not(:first-child) {
+        font-family: Classwiz-X;
+      }
+      tr.hlfontcwxtableFA
+        td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)) {
+        font-family: Classwiz-X;
+      }
+      tr.hlfontcwxtableFB
+        td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)) {
+        font-family: Classwiz-X;
+      }
+      tr.hlfontcwxtableFD
+        td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)):not(:nth-child(15)):not(:nth-child(16)) {
+        font-family: Classwiz-X;
+      }
+      .tooltip {
+        position: absolute;
+        background-color: #000000;
+        padding: 5px;
+        border: 2px solid yellow;
+        display: none;
+      }
     </style>
- </head>
-  <body style="background-color: #772953">
-    <h6 style="text-align:left;font-family:UbuntuR;font-size:1px">
-      &lt;meta<br>
-      name="viewport"<br>
-      http-equiv="CONTENT-TYPE"<br>
-      content="text/html;<br>
-      width=device-width,<br>
-      initial-scale=0.50;<br>
-      charset=UTF-8"/&gt;<br>
-      <br>
-      body {<br>
-      width: 170%;<br>
-      }<br>
-      @media only screen and (max-width: 480px) {<br>
-      body {<br>
-      width: auto;<br>
-      font-size: 45px;<br>
-      padding: 5px;<br>
-      }<br>
-      }<br>
-      background-color:Canonical Aubergine[#772953]<br>
-      <br>
-      Document site<br>
+  </head>
+  <body>
+    <h6 style="text-align: left; font-family: UbuntuR; font-size: 5px">
+      &lt;meta<br />
+      name="viewport"<br />
+      http-equiv="CONTENT-TYPE"<br />
+      content="text/html;<br />
+      width=device-width,<br />
+      initial-scale=0.50;<br />
+      charset=UTF-8"/&gt;<br />
+      <br />
+      body {<br />
+      width: 170%;<br />
+      }<br />
+      @media only screen and (max-width: 480px) {<br />
+      body {<br />
+      width: auto;<br />
+      font-size: 45px;<br />
+      padding: 5px;<br />
+      }<br />
+      }<br />
+      background-color:<br />
+      <button
+        onclick="toggleMode()"
+        id="modeButton"
+        style="background-color: white; font-size: 14px; color: grey"
+      >
+        Toggle background color
+      </button>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var theme = localStorage.getItem("theme");
+          if (theme === "dark") {
+            document.body.classList.add("dark-mode");
+            document.getElementById("modeButton").textContent =
+              "Toggle background color";
+          }
+        });
+
+        function toggleMode() {
+          var body = document.body;
+          var modeButton = document.getElementById("modeButton");
+          body.classList.toggle("dark-mode");
+          if (body.classList.contains("dark-mode")) {
+            modeButton.textContent = "#212121";
+            localStorage.setItem("theme", "dark");
+          } else {
+            modeButton.textContent = "#EAEAEA";
+            localStorage.setItem("theme", "light");
+          }
+        }
+      </script>
+      <br />
+      <br />
+      Document site<br />
     </h6>
-    <h1 style="text-align: center;font-size: 75px;font-family:UbuntuR">
+    <h1 style="text-align: center; font-size: 75px; font-family: UbuntuR">
       The full CWI/CWX table?
     </h1>
-      <p style="font-family:UbuntuLow;text-align:center">
-      <b>Note:</b><br>
-      <b>s:shift</b><br>
-      <b>alp/a:alpha</b><br>
-      <b>^ v &lt; &gt;:up,down,left,right<br>
-      logab:log (logarithm)<br>
-      (…)<br>
-      […]<br>
-      {…}<br>
-      &lt;…&gt;<br>
-      Thank you for visit my website <span style="font-family:verdana;font-size:25px">.͜.</span></b></p>
-    <table class="center" style="text-align:center;font-family:UbuntuMonoBold">
-      <h3 style="text-align: center;font-family:UbuntuMonoBold"><b>Hex pointers</b></h3>
+    <p style="font-family: UbuntuLow; text-align: center">
+      <b>Note:</b><br />
+      <b>s:shift</b><br />
+      <b>alp/a:alpha</b><br />
+      <b
+        >^ v &lt; &gt;:up,down,left,right<br />
+        logab:log (logarithm)<br />
+        (…)<br />
+        […]<br />
+        {…}<br />
+        &lt;…&gt;<br />
+        Thank you for visit my website
+        <span style="font-family: verdana; font-size: 25px">.͜.</span></b
+      >
+    </p>
+    <table
+      class="center"
+      style="text-align: center; font-family: UbuntuMonoBold"
+    >
+      <h3 style="text-align: center; font-family: UbuntuMonoBold">
+        <b>Hex pointers</b>
+      </h3>
       <tr>
-        <td style="font-size:18px"><b>Hex</b></td>
-        <td style="font-size:18px"><b>Pointer *</b></td>
-        <td style="font-size:18px"><b>Operation</b></td>
+        <td style="font-size: 18px"><b>Hex</b></td>
+        <td style="font-size: 18px"><b>Pointer *</b></td>
+        <td style="font-size: 18px"><b>Operation</b></td>
       </tr>
       <tr>
-        <td style="font-size:20px">0x3A</td>
-        <td style="font-size:25px;font-family:Classwiz-X"></td>
+        <td style="font-size: 20px">0x3A</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
         <td>S 7 3 7</td>
       </tr>
       <tr>
-        <td style="font-size:20px">0x3B</td>
-        <td style="font-size:25px;font-family:Classwiz-X"></td>
+        <td style="font-size: 20px">0x3B</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
         <td>S 7 3 8</td>
       </tr>
       <tr>
-        <td style="font-size:20px">0x3C</td>
-        <td style="font-size:25px;font-family:Classwiz-X"></td>
+        <td style="font-size: 20px">0x3C</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
         <td>S 7 3 9</td>
       </tr>
       <tr>
-        <td style="font-size:20px">0x3D</td>
-        <td style="font-size:25px;font-family:Classwiz-X"></td>
+        <td style="font-size: 20px">0x3D</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
         <td>S 7 3 (-)</td>
       </tr>
       <tr>
-        <td style="font-size:20px">0x3E</td>
-        <td style="font-size:25px;font-family:Classwiz-X"></td>
+        <td style="font-size: 20px">0x3E</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
         <td>S 7 3 °°°</td>
       </tr>
       <tr>
-        <td style="font-size:20px">0x3F</td>
-        <td style="font-size:25px;font-family:Classwiz-X"></td>
+        <td style="font-size: 20px">0x3F</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
         <td>S 7 3 x<sup>-1</sup></td>
       </tr>
     </table>
-    <h1 style="text-align: center">
-      ______________________________
-    </h1>
-    <h3 style="text-align: center;font-family:UbuntuMonoBold">
+    <h1 style="text-align: center">______________________________</h1>
+    <h3 style="text-align: center; font-family: UbuntuMonoBold">
       Uppercase Latin alphabet
     </h3>
-    <table class="center" style="text-align:center;font-family:'UbuntuMonoBold'">
+    <table
+      class="center"
+      style="text-align: center; font-family: 'UbuntuMonoBold'"
+    >
       <tr>
         <th>Hex</th>
         <th>Chars</th>
@@ -164,351 +228,357 @@
       </tr>
       <tr>
         <td>41</td>
-        <td style="font-family:Classwiz-X">A</td>
-        <td style="font-family:Classwiz-X">Ans</td>
+        <td style="font-family: Classwiz-X">A</td>
+        <td style="font-family: Classwiz-X">Ans</td>
         <td>Ans</td>
         <td></td>
         <td>50</td>
-        <td style="font-family:Classwiz-X">P</td>
-        <td style="font-family:Classwiz-X">∑(</td>
+        <td style="font-family: Classwiz-X">P</td>
+        <td style="font-family: Classwiz-X">∑(</td>
         <td>s (x)</td>
       </tr>
       <tr>
         <td>42</td>
-        <td style="font-family:Classwiz-X">B</td>
-        <td style="font-family:Classwiz-X">A</td>
+        <td style="font-family: Classwiz-X">B</td>
+        <td style="font-family: Classwiz-X">A</td>
         <td>Alp (-)</td>
         <td></td>
         <td>51</td>
-        <td style="font-family:Classwiz-X">Q</td>
-        <td style="font-family:Classwiz-X">∫(</td>
+        <td style="font-family: Classwiz-X">Q</td>
+        <td style="font-family: Classwiz-X">∫(</td>
         <td>∫.°-</td>
       </tr>
       <tr>
         <td>43</td>
-        <td style="font-family:Classwiz-X">C</td>
-        <td style="font-family:Classwiz-X">B</td>
+        <td style="font-family: Classwiz-X">C</td>
+        <td style="font-family: Classwiz-X">B</td>
         <td>Alp °°°°</td>
         <td></td>
         <td>52</td>
-        <td style="font-family:Classwiz-X">R</td>
-        <td style="font-family:Classwiz-X">d/d𝒙(</td>
+        <td style="font-family: Classwiz-X">R</td>
+        <td style="font-family: Classwiz-X">d/d𝒙(</td>
         <td>s ∫.°-</td>
       </tr>
       <tr>
         <td>44</td>
-        <td style="font-family:Classwiz-X">D</td>
-        <td style="font-family:Classwiz-X">C</td>
+        <td style="font-family: Classwiz-X">D</td>
+        <td style="font-family: Classwiz-X">C</td>
         <td>Alp x<sup>-1</sup></td>
         <td></td>
         <td>53</td>
-        <td style="font-family:Classwiz-X">S</td>
-        <td style="font-family:Classwiz-X">∏(</td>
+        <td style="font-family: Classwiz-X">S</td>
+        <td style="font-family: Classwiz-X">∏(</td>
         <td>Alp x</td>
       </tr>
       <tr>
         <td>45</td>
-        <td style="font-family:Classwiz-X">E</td>
-        <td style="font-family:Classwiz-X">D</td>
+        <td style="font-family: Classwiz-X">E</td>
+        <td style="font-family: Classwiz-X">D</td>
         <td>Alp sin</td>
         <td></td>
         <td>54</td>
-        <td style="font-family:Classwiz-X">T</td>
-        <td style="font-family:Classwiz-X">@</td>
+        <td style="font-family: Classwiz-X">T</td>
+        <td style="font-family: Classwiz-X">@</td>
         <td>S 7 1 6</td>
-        </tr>
-        <tr>
+      </tr>
+      <tr>
         <td>46</td>
-        <td style="font-family:Classwiz-X">F</td>
-        <td style="font-family:Classwiz-X">E</td>
+        <td style="font-family: Classwiz-X">F</td>
+        <td style="font-family: Classwiz-X">E</td>
         <td>Alp cos</td>
         <td></td>
         <td>55</td>
-        <td style="font-family:Classwiz-X">U</td>
-        <td style="font-family:Classwiz-X">@</td>
+        <td style="font-family: Classwiz-X">U</td>
+        <td style="font-family: Classwiz-X">@</td>
         <td>S 7 v 2 1</td>
-        </tr>
-        <tr>
+      </tr>
+      <tr>
         <td>47</td>
-        <td style="font-family:Classwiz-X">G</td>
-        <td style="font-family:Classwiz-X">F</td>
+        <td style="font-family: Classwiz-X">G</td>
+        <td style="font-family: Classwiz-X">F</td>
         <td>Alp tan</td>
         <td></td>
         <td>56</td>
-        <td style="font-family:Classwiz-X">V</td>
-        <td style="font-family:Classwiz-X">@</td>
-        <td>S 7 1 7</td> 
+        <td style="font-family: Classwiz-X">V</td>
+        <td style="font-family: Classwiz-X">@</td>
+        <td>S 7 1 7</td>
       </tr>
       <tr>
         <td>48</td>
-        <td style="font-family:Classwiz-X">H</td>
-        <td style="font-family:Classwiz-X">𝒙</td>
+        <td style="font-family: Classwiz-X">H</td>
+        <td style="font-family: Classwiz-X">𝒙</td>
         <td>x</td>
         <td></td>
         <td>57</td>
-        <td style="font-family:Classwiz-X">W</td>
-        <td style="font-family:Classwiz-X">@</td>
-        <td>S 7 v 1 2</td> 
+        <td style="font-family: Classwiz-X">W</td>
+        <td style="font-family: Classwiz-X">@</td>
+        <td>S 7 v 1 2</td>
       </tr>
       <tr>
         <td>49</td>
-        <td style="font-family:Classwiz-X">I</td>
-        <td style="font-family:Classwiz-X">𝒚</td>
+        <td style="font-family: Classwiz-X">I</td>
+        <td style="font-family: Classwiz-X">𝒚</td>
         <td>Alp )</td>
         <td></td>
         <td>58</td>
-        <td style="font-family:Classwiz-X">X</td>
-        <td style="font-family:Classwiz-X">Min</td>
-        <td>S 7 1 8</td> 
+        <td style="font-family: Classwiz-X">X</td>
+        <td style="font-family: Classwiz-X">Min</td>
+        <td>S 7 1 8</td>
       </tr>
       <tr>
         <td>4A</td>
-        <td style="font-family:Classwiz-X">J</td>
-        <td style="font-family:Classwiz-X">PreAns</td>
+        <td style="font-family: Classwiz-X">J</td>
+        <td style="font-family: Classwiz-X">PreAns</td>
         <td>Alp Ans</td>
         <td></td>
         <td>59</td>
-        <td style="font-family:Classwiz-X">Y</td>
-        <td style="font-family:Classwiz-X">Max(</td>
-        <td>S 7 1 9</td> 
+        <td style="font-family: Classwiz-X">Y</td>
+        <td style="font-family: Classwiz-X">Max(</td>
+        <td>S 7 1 9</td>
       </tr>
       <tr>
         <td>4B</td>
-        <td style="font-family:Classwiz-X">K</td>
-        <td style="font-family:Classwiz-X">𝒛</td>
+        <td style="font-family: Classwiz-X">K</td>
+        <td style="font-family: Classwiz-X">𝒛</td>
         <td>A S=&gt;D</td>
         <td></td>
         <td>5A</td>
-        <td style="font-family:Classwiz-X">Z</td>
-        <td style="font-family:Classwiz-X">Mean(</td>
-        <td>S 7 2 6</td> 
+        <td style="font-family: Classwiz-X">Z</td>
+        <td style="font-family: Classwiz-X">Mean(</td>
+        <td>S 7 2 6</td>
       </tr>
       <tr>
         <td>4C</td>
-        <td style="font-family:Classwiz-X">L</td>
-        <td style="font-family:Classwiz-X">𝜃</td>
+        <td style="font-family: Classwiz-X">L</td>
+        <td style="font-family: Classwiz-X">𝜃</td>
         <td>S 7 1 3</td>
         <td></td>
       </tr>
       <tr>
         <td>4D</td>
-        <td style="font-family:Classwiz-X">M</td>
-        <td style="font-family:Classwiz-X">@</td>
+        <td style="font-family: Classwiz-X">M</td>
+        <td style="font-family: Classwiz-X">@</td>
         <td>S 7 4 7</td>
         <td></td>
       </tr>
       <tr>
         <td>4E</td>
-        <td style="font-family:Classwiz-X">N</td>
-        <td style="font-family:Classwiz-X">@</td>
+        <td style="font-family: Classwiz-X">N</td>
+        <td style="font-family: Classwiz-X">@</td>
         <td>S 7 4 8</td>
         <td></td>
       </tr>
       <tr>
         <td>4F</td>
-        <td style="font-family:Classwiz-X">O</td>
-        <td style="font-family:Classwiz-X">@</td>
+        <td style="font-family: Classwiz-X">O</td>
+        <td style="font-family: Classwiz-X">@</td>
         <td>S 7 4 9</td>
-        <td></td>        
+        <td></td>
       </tr>
     </table>
-    <h1 style="text-align: center">
-      ______________________________
-    </h1>
-   <table class="center" style="text-align:center;font-family:UbuntuMonoBold">
-   <h3 style="text-align: center;font-family: UbuntuMonoBold">
-      Lowercase Latin alphabet
-    </h3>
-     <thead>
+    <h1 style="text-align: center">______________________________</h1>
+    <table
+      class="center"
+      style="text-align: center; font-family: UbuntuMonoBold"
+    >
+      <h3 style="text-align: center; font-family: UbuntuMonoBold">
+        Lowercase Latin alphabet
+      </h3>
+      <thead>
+        <tr>
+          <th>Hex</th>
+          <th>Chars</th>
+          <th>Display</th>
+          <th>Operation</th>
+          <th></th>
+          <th>Hex</th>
+          <th>Chars</th>
+          <th>Display</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
       <tr>
-        <th>Hex</th>
-        <th>Chars</th>
-        <th>Display</th>
-        <th>Operation</th>
-        <th></th>
-        <th>Hex</th>
-        <th>Chars</th>
-        <th>Display</th>
-        <th>Operation</th>
+        <td>61</td>
+        <td style="font-family: Classwiz-X">a</td>
+        <td style="font-family: Classwiz-X">P(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>70</td>
+        <td style="font-family: Classwiz-X">p</td>
+        <td style="font-family: Classwiz-X">cosh<sup>-1</sup>(</td>
+        <td>OPTN 1 5</td>
       </tr>
-     </thead>
-     <tr>
-       <td>61</td>
-       <td style="font-family:Classwiz-X">a</td>
-       <td style="font-family:Classwiz-X">P(</td>
-       <td>[Put hex]</td>
-       <td></td>
-       <td>70</td>
-       <td style="font-family:Classwiz-X">p</td>
-       <td style="font-family:Classwiz-X">cosh<sup>-1</sup>(</td>
-       <td>OPTN 1 5</td>
-     </tr>
-     <tr>
-       <td>62</td>
-       <td style="font-family:Classwiz-X">b</td>
-       <td style="font-family:Classwiz-X">Q(</td>
-       <td>[Put hex]</td>
-       <td></td>
-       <td>71</td>
-       <td style="font-family:Classwiz-X">q</td>
-       <td style="font-family:Classwiz-X">tanh<sup>-1</sup>(</td>
-       <td>OPTN 1 6</td>
-     </tr>
-     <tr>
-       <td>63</td>
-       <td style="font-family:Classwiz-X">c</td>
-       <td style="font-family:Classwiz-X">R(</td>
-       <td>[Put hex]</td>
-       <td></td>
-       <td>72</td>
-       <td style="font-family:Classwiz-X">r</td>
-       <td style="font-family:Classwiz-X"><i><b>e</b></i>^(</td>
-       <td>S ln</td>
-     </tr>
-     <tr>
-       <td>64</td>
-       <td style="font-family:Classwiz-X">d</td>
-       <td style="font-family:Classwiz-X">Not(</td>
-       <td>[Put hex]</td>
-       <td></td>
-       <td>73</td>
-       <td style="font-family:Classwiz-X">s</td>
-       <td style="font-family:Classwiz-X"><b>10</b>^(</td>
-       <td>S log</td>
-     </tr>
-     <tr>
-       <td>65</td>
-       <td style="font-family:Classwiz-X">e</td>
-       <td style="font-family:Classwiz-X">Neg(</td>
-       <td>[Put hex]</td>
-       <td></td>
-       <td>74</td>
-       <td style="font-family:Classwiz-X">t</td>
-       <td style="font-family:Classwiz-X">√(</td>
-       <td>√</td>
-     </tr>
-     <tr>
-       <td>66</td>
-       <td style="font-family:Classwiz-X">f</td>
-       <td style="font-family:Classwiz-X">Conjg(</td>
-       <td>[Put hex]</td>
-       <td></td>
-       <td>75</td>
-       <td style="font-family:Classwiz-X">u</td>
-       <td style="font-family:Classwiz-X">ln(</td>
-       <td>ln</td>
-     </tr>
-     <tr>
-       <td>67</td>
-       <td style="font-family:Classwiz-X">g</td>
-       <td style="font-family:Classwiz-X">Arg(</td>
-       <td>[Put hex]</td>
-       <td></td>
-       <td>76</td>
-       <td style="font-family:Classwiz-X">v</td>
-       <td style="font-family:Classwiz-X"><sup>3</sup>√(</td>
-       <td>S √</td>
-     </tr>
-     <tr>
-       <td>68</td>
-       <td style="font-family:Classwiz-X">h</td>
-       <td style="font-family:Classwiz-X">Abs(</td>
-       <td>S (</td>
-       <td></td>
-       <td>77</td>
-       <td style="font-family:Classwiz-X">w</td>
-       <td style="font-family:Classwiz-X">sin</td>
-       <td>sin</td>
-     </tr>
-     <tr>
-       <td>69</td>
-       <td style="font-family:Classwiz-X">i</td>
-       <td style="font-family:Classwiz-X">Rnd(</td>
-       <td>S 0</td>
-       <td></td>
-       <td>78</td>
-       <td style="font-family:Classwiz-X">x</td>
-       <td style="font-family:Classwiz-X">cos</td>
-       <td>cos</td>
-     </tr>
-     <tr>
-       <td>6A</td>
-       <td style="font-family:Classwiz-X">j</td>
-       <td style="font-family:Classwiz-X">Det(</td>
-       <td>[Put hex]</td>
-       <td></td>
-       <td>79</td>
-       <td style="font-family:Classwiz-X">y</td>
-       <td style="font-family:Classwiz-X">tan</td>
-       <td>tan</td>
-     </tr>
-     <tr>
-       <td>6B</td>
-       <td style="font-family:Classwiz-X">k</td>
-       <td style="font-family:Classwiz-X">Trn(</td>
-       <td>[Put hex]</td>
-       <td></td>
-       <td>7A</td>
-       <td style="font-family:Classwiz-X">z</td>
-       <td style="font-family:Classwiz-X">sin<sup>-1</sup>(</td>
-       <td>S sin</td>
-     </tr>
-     <tr>
-       <td>6C</td>
-       <td style="font-family:Classwiz-X">l</td>
-       <td style="font-family:Classwiz-X">sinh(</td>
-       <td>OPTN 1 1</td>
-       <td></td>
-     </tr>
-     <tr>
-       <td>6D</td>
-       <td style="font-family:Classwiz-X">m</td>
-       <td style="font-family:Classwiz-X">cosh(</td>
-       <td>OPTN 1 2</td>
-       <td></td>
-     </tr>
-     <tr>
-       <td>6E</td>
-       <td style="font-family:Classwiz-X">n</td>
-       <td style="font-family:Classwiz-X">tanh(</td>
-       <td>OPTN 1 3</td>
-       <td></td>
-     </tr>
-     <tr>
-       <td>6F</td>
-       <td style="font-family:Classwiz-X">o</td>
-       <td style="font-family:Classwiz-X">sinh<sup>-1</sup>(</td>
-       <td>OPTN 1 4</td>
-       <td></td>
-     </tr>
+      <tr>
+        <td>62</td>
+        <td style="font-family: Classwiz-X">b</td>
+        <td style="font-family: Classwiz-X">Q(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>71</td>
+        <td style="font-family: Classwiz-X">q</td>
+        <td style="font-family: Classwiz-X">tanh<sup>-1</sup>(</td>
+        <td>OPTN 1 6</td>
+      </tr>
+      <tr>
+        <td>63</td>
+        <td style="font-family: Classwiz-X">c</td>
+        <td style="font-family: Classwiz-X">R(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>72</td>
+        <td style="font-family: Classwiz-X">r</td>
+        <td style="font-family: Classwiz-X">
+          <i><b>e</b></i
+          >^(
+        </td>
+        <td>S ln</td>
+      </tr>
+      <tr>
+        <td>64</td>
+        <td style="font-family: Classwiz-X">d</td>
+        <td style="font-family: Classwiz-X">Not(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>73</td>
+        <td style="font-family: Classwiz-X">s</td>
+        <td style="font-family: Classwiz-X"><b>10</b>^(</td>
+        <td>S log</td>
+      </tr>
+      <tr>
+        <td>65</td>
+        <td style="font-family: Classwiz-X">e</td>
+        <td style="font-family: Classwiz-X">Neg(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>74</td>
+        <td style="font-family: Classwiz-X">t</td>
+        <td style="font-family: Classwiz-X">√(</td>
+        <td>√</td>
+      </tr>
+      <tr>
+        <td>66</td>
+        <td style="font-family: Classwiz-X">f</td>
+        <td style="font-family: Classwiz-X">Conjg(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>75</td>
+        <td style="font-family: Classwiz-X">u</td>
+        <td style="font-family: Classwiz-X">ln(</td>
+        <td>ln</td>
+      </tr>
+      <tr>
+        <td>67</td>
+        <td style="font-family: Classwiz-X">g</td>
+        <td style="font-family: Classwiz-X">Arg(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>76</td>
+        <td style="font-family: Classwiz-X">v</td>
+        <td style="font-family: Classwiz-X"><sup>3</sup>√(</td>
+        <td>S √</td>
+      </tr>
+      <tr>
+        <td>68</td>
+        <td style="font-family: Classwiz-X">h</td>
+        <td style="font-family: Classwiz-X">Abs(</td>
+        <td>S (</td>
+        <td></td>
+        <td>77</td>
+        <td style="font-family: Classwiz-X">w</td>
+        <td style="font-family: Classwiz-X">sin</td>
+        <td>sin</td>
+      </tr>
+      <tr>
+        <td>69</td>
+        <td style="font-family: Classwiz-X">i</td>
+        <td style="font-family: Classwiz-X">Rnd(</td>
+        <td>S 0</td>
+        <td></td>
+        <td>78</td>
+        <td style="font-family: Classwiz-X">x</td>
+        <td style="font-family: Classwiz-X">cos</td>
+        <td>cos</td>
+      </tr>
+      <tr>
+        <td>6A</td>
+        <td style="font-family: Classwiz-X">j</td>
+        <td style="font-family: Classwiz-X">Det(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>79</td>
+        <td style="font-family: Classwiz-X">y</td>
+        <td style="font-family: Classwiz-X">tan</td>
+        <td>tan</td>
+      </tr>
+      <tr>
+        <td>6B</td>
+        <td style="font-family: Classwiz-X">k</td>
+        <td style="font-family: Classwiz-X">Trn(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>7A</td>
+        <td style="font-family: Classwiz-X">z</td>
+        <td style="font-family: Classwiz-X">sin<sup>-1</sup>(</td>
+        <td>S sin</td>
+      </tr>
+      <tr>
+        <td>6C</td>
+        <td style="font-family: Classwiz-X">l</td>
+        <td style="font-family: Classwiz-X">sinh(</td>
+        <td>OPTN 1 1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6D</td>
+        <td style="font-family: Classwiz-X">m</td>
+        <td style="font-family: Classwiz-X">cosh(</td>
+        <td>OPTN 1 2</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6E</td>
+        <td style="font-family: Classwiz-X">n</td>
+        <td style="font-family: Classwiz-X">tanh(</td>
+        <td>OPTN 1 3</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6F</td>
+        <td style="font-family: Classwiz-X">o</td>
+        <td style="font-family: Classwiz-X">sinh<sup>-1</sup>(</td>
+        <td>OPTN 1 4</td>
+        <td></td>
+      </tr>
     </table>
-    <h1 style="text-align: center">
-      ______________________________
-    </h1>
-    <table style="text-align:center;font-size:14px;font-family:UbuntuMonoBold">
-      <h3 style="text-align:center;font-family:UbuntuMonoBold">0x00__ Table<br>
-      Input/1 level chars table<br></h3>
-     <thead>
-      <tr>
-        <th>0x00__</th>
-        <th>0</th>
-        <th>1</th>
-        <th>2</th>
-        <th>3</th>
-        <th>4</th>
-        <th>5</th>
-        <th>6</th>
-        <th>7</th>
-        <th>8</th>
-        <th>9</th>
-        <th>A</th>
-        <th>B</th>
-        <th>C</th>
-        <th>D</th>
-        <th>E</th>
-        <th>F</th>
-      </tr>
-     </thead>
+    <h1 style="text-align: center">______________________________</h1>
+    <table
+      style="text-align: center; font-size: 14px; font-family: UbuntuMonoBold"
+    >
+      <h3 style="text-align: center; font-family: UbuntuMonoBold">
+        0x00__ Table<br />
+        Input/1 level chars table<br />
+      </h3>
+      <thead>
+        <tr>
+          <th>0x00__</th>
+          <th>0</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>E</th>
+          <th>F</th>
+        </tr>
+      </thead>
       <tr class="hlfontcwxRow">
         <td>0</td>
         <td></td>
@@ -798,326 +868,128 @@
         <td>F</td>
       </tr>
     </table>
-      <p style="text-align:center;font-family:UbuntuBold;font-size:20px">
-      0xF_ are different from other calculator so i can&prime;t add it to this table<br>
-      Byte 0x4B in other calculator is @ but in fx-580vnx it is variable <span style="font-family:Classwiz-X">𝒛</span>
-      <br>
-      4D:a @ glitch variable<br>
-      4E:and a @ glitch variable<br>
-      4F:and also a @ glitch variable<br>
-      3 of these glitch variables are useful for spelling<br>
-      </p>
+    <p style="text-align: center; font-family: UbuntuBold; font-size: 20px">
+      0xF_ are different from other calculator so i can&prime;t add it to this
+      table<br />
+      Byte 0x4B in other calculator is @ but in fx-580vnx it is variable
+      <span style="font-family: Classwiz-X">𝒛</span>
+      <br />
+      4D:a @ glitch variable<br />
+      4E:and a @ glitch variable<br />
+      4F:and also a @ glitch variable<br />
+      3 of these glitch variables are useful for spelling<br />
+    </p>
     <script>
-document.getElementById('myTable').addEventListener('mouseover', function(event) {
-    var target = event.target;
+      document.getElementById('myTable').addEventListener('mouseover', function(event) {
+          var target = event.target;
 
-    // Check if the event target is a table cell
-    if (target.tagName.toLowerCase() === 'td') {
-      var row = target.parentNode.rowIndex - 1; // Row index is zero-based
-      var col = target.cellIndex - 1;
-      var text = target.textContent;
-      showTooltip(target, `R: ${getHex(row)}, C: ${getHex(col)}, T: ${text}`);
-    }
-  });
+          // Check if the event target is a table cell
+          if (target.tagName.toLowerCase() === 'td') {
+            var row = target.parentNode.rowIndex - 1; // Row index is zero-based
+            var col = target.cellIndex - 1;
+            var text = target.textContent;
+            showTooltip(target, `R: ${getHex(row)}, C: ${getHex(col)}, T: ${text}`);
+          }
+        });
 
-  document.getElementById('myTable').addEventListener('mouseout', function(event) {
-    var target = event.target;
+        document.getElementById('myTable').addEventListener('mouseout', function(event) {
+          var target = event.target;
 
-    // Check if the event target is a table cell
-    if (target.tagName.toLowerCase() === 'td') {
-      hideTooltip(target);
-    }
-  });
+          // Check if the event target is a table cell
+          if (target.tagName.toLowerCase() === 'td') {
+            hideTooltip(target);
+          }
+        });
 
-  function showTooltip(element, text) {
-    // Remove existing tooltips
-    var existingTooltip = document.querySelector('.tooltip');
-    if (existingTooltip) {
-      existingTooltip.parentNode.removeChild(existingTooltip);
-    }
+        function showTooltip(element, text) {
+          // Remove existing tooltips
+          var existingTooltip = document.querySelector('.tooltip');
+          if (existingTooltip) {
+            existingTooltip.parentNode.removeChild(existingTooltip);
+          }
 
-    var tooltip = document.createElement('div');
-    tooltip.className = 'tooltip';
-    element.appendChild(tooltip);
-    tooltip.innerHTML = text;
-    tooltip.style.display = 'block';
-  }
+          var tooltip = document.createElement('div');
+          tooltip.className = 'tooltip';
+          element.appendChild(tooltip);
+          tooltip.innerHTML = text;
+          tooltip.style.display = 'block';
+        }
 
-  function hideTooltip(element) {
-    var tooltip = element.querySelector('.tooltip');
-    var m;
-      m=document.getElementById('myTooltip');m.style.display="none";
-      }
-    if (tooltip) {
-      tooltip.style.display = 'none';
-    }
-  }
+        function hideTooltip(element) {
+          var tooltip = element.querySelector('.tooltip');
+          var m;
+            m=document.getElementById('myTooltip');m.style.display="none";
+            }
+          if (tooltip) {
+            tooltip.style.display = 'none';
+          }
+        }
 
-  function getHex(value) {
-    // Convert value to hexadecimal format
-    return value >= 10 ? value.toString(16).toUpperCase() : value;
-  }
+        function getHex(value) {
+          // Convert value to hexadecimal format
+          return value >= 10 ? value.toString(16).toUpperCase() : value;
+        }
     </script>
-    <h3 style="text-align:center;font-family:UbuntuMonoBold">
-      Output/2 level chars table<br></h3>
-     <h2 style="font-family:UbuntuBold;text-align:center;font-size:30px">
-      0x10-&gt;0xEC(UN): Basic Latin and math punctuations
-      <img class="center" src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/IMG_20231116_124819.jpg"><br>
-   <p style="font-size:15px"> And also preview of 0xF___ tables(please note that every 0xF___ only exclusive for specific countries)</p>
-        0xF010-&gt;0xF031(UN): Japanese conversion units<br>
-      <img class="center" src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/IMG_20231116_124843.jpg"><br>
-        0xF110-&gt;0xF1EE(CN): Chinese characters<br>
-      <img class="center" src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/IMG_20231116_124907.jpg"><br>
-        0xF110-&gt;0xF1EE(JA): Japanese Katakana<br>
-      <img class="center" src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/Screenshot_2023_1214_122212.jpg"><br>
-        0xF210-&gt;0xF25B(JA): Japanese Kanji?
-      <img class="center" src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/Screenshot_20231116_123528.jpg"><br>
-        0xF310-&gt;0xF3D6(SR): Serbian Cyrillic alphabet
-      <img class="center" src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/Screenshot_2023_1116_123605.jpg"><br>
-        0xF410-&gt;0xF495(VN): Vietnamese vowel with accent marks
-      <img class="center" src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/Screenshot_2023_1116_123626.jpg"><br>
-     </h2>
-    <h3 style="font-family:UbuntuBold;text-align:center">src:<a href="https://cwh.caduo.eu.org">cwh.caduo.eu.org</a> changed domain name to <a href="https://h.20142022.xyz">h.20142022.xyz</a>, original created by Happy sheep.   
+    <h3 style="text-align: center; font-family: UbuntuMonoBold">
+      Output/2 level chars table<br />
     </h3>
-    <table style="text-align:center;font-size:20px;font-family:UbuntuMonoBold;padding:20px">
-     <h3 style="text-align:center;font-family:UbuntuMonoBold">0xFA__ Table</h3>
-       <tr>
-        <th>Hex</th>
-        <th>Display</th>
-        <th></th>
-        <th>Hex</th>
-        <th>Display</th>
-        <td></td>
-        <th>Hex</th>
-        <th>Display</th>
-        <th></th>
-        <th>Hex</th>
-        <th>Display</th>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA01</td>
-         <td>ch▶yd</td>
-         <td></td>
-         <td>FA10</td>
-         <td>acre▶mile<sup>2</sup></td>
-         <td></td>
-         <td>FA20</td>
-         <td>尺▶間</td>
-         <td></td>
-         <td>FA30</td>
-         <td>畝▶反</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA02</td>
-         <td>yd▶ch</td>
-         <td></td>
-         <td>FA11</td>
-         <td>bu▶gal(UK)</td>
-         <td></td>
-         <td>FA21</td>
-         <td>町▶尺</td>
-         <td></td>
-         <td>FA31</td>
-         <td>町▶反</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA03</td>
-         <td>ch▶mile</td>
-         <td></td>
-         <td>FA12</td>
-         <td>gal(UK)▶bu</td>
-         <td></td>
-         <td>FA22</td>
-         <td>尺▶町</td>
-         <td></td>
-         <td>FA32</td>
-         <td>反▶町</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA04</td>
-         <td>mile▶ch</td>
-         <td></td>
-         <td>FA13</td>
-         <td>lb▶oz</td>
-         <td></td>
-         <td>FA23</td>
-         <td>町▶間</td>
-         <td></td>
-         <td>FA33</td>
-         <td>合▶升</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA05</td>
-         <td>mil▶in</td>
-         <td></td>
-         <td>FA14</td>
-         <td>oz▶lb</td>
-         <td></td>
-         <td>FA24</td>
-         <td>間▶町</td>
-         <td></td>
-         <td>FA34</td>
-         <td>升▶合</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA06</td>
-         <td>in▶mil</td>
-         <td></td>
-         <td>FA15</td>
-         <td>ton(long)▶oz</td>
-         <td></td>
-         <td>FA25</td>
-         <td>里▶間</td>
-         <td></td>
-         <td>FA35</td>
-         <td>斗▶升</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA07</td>
-         <td>fath▶in</td>
-         <td></td>
-         <td>FA16</td>
-         <td>oz▶ton(long)</td>
-         <td></td>
-         <td>FA26</td>
-         <td>間▶町</td>
-         <td></td>
-         <td>FA36</td>
-         <td>升▶斗</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA08</td>
-         <td>in▶fath</td>
-         <td></td>
-         <td>FA17</td>
-         <td>ton(long)▶lb</td>
-         <td></td>
-         <td>FA27</td>
-         <td>里▶町</td>
-         <td></td>
-         <td>FA37</td>
-         <td>石▶斗</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA09</td>
-         <td>fath▶ft</td>
-         <td></td>
-         <td>FA18</td>
-         <td>lb▶ton(long)</td>
-         <td></td>
-         <td>FA28</td>
-         <td>町▶里</td>
-         <td></td>
-         <td>FA38</td>
-         <td>斗▶石</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA0A</td>
-         <td>ft▶fath</td>
-         <td></td>
-         <td>FA19</td>
-         <td>ton(short)▶oz</td>
-         <td></td>
-         <td>FA29</td>
-         <td>海里▶尺</td>
-         <td></td>
-         <td>FA39</td>
-         <td>勺▶合</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA0B</td>
-         <td>fath▶yd</td>
-         <td></td>
-         <td>FA1A</td>
-         <td>oz▶ton(short)</td>
-         <td></td>
-         <td>FA2A</td>
-         <td>尺▶海里</td>
-         <td></td>
-         <td>FA3A</td>
-         <td>合▶勺</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA0C</td>
-         <td>yd▶fath</td>
-         <td></td>
-         <td>FA1B</td>
-         <td>ton(short)▶lb</td>
-         <td></td>
-         <td>FA2B</td>
-         <td>丈▶尺</td>
-         <td></td>
-         <td>FA3B</td>
-         <td>匁▶貫</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA0D</td>
-         <td>ha▶a</td>
-         <td></td>
-         <td>FA1C</td>
-         <td>lb▶ton(short)</td>
-         <td></td>
-         <td>FA2C</td>
-         <td>尺▶丈</td>
-         <td></td>
-         <td>FA3C</td>
-         <td>貫▶匁</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA0E</td>
-         <td>a▶ha</td>
-         <td></td>
-         <td>FA1D</td>
-         <td>寸▶尺</td>
-         <td></td>
-         <td>FA2D</td>
-         <td>畝▶坪</td>
-         <td></td>
-         <td>FA3D</td>
-         <td>斤▶貫</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td>FA0F</td>
-         <td>mile²▶acre</td>
-         <td></td>
-         <td>FA1E</td>
-         <td>尺▶寸</td>
-         <td></td>
-         <td>FA2E</td>
-         <td>坪▶畝</td>
-         <td></td>
-         <td>FA3E</td>
-         <td>貫▶斤</td>
-       </tr>
-       <tr class="hlfontcwxtableFA">
-         <td></td>
-         <td></td>
-         <td></td>
-         <td>FA1F</td>
-         <td>間▶尺</td>
-         <td></td>
-         <td>FA2F</td>
-         <td>反▶畝</td>
-         <td></td>
-         <td>FA3F</td>
-         <td>斤▶匁</td>
-       </tr>
-      <tr>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td></td>
-         <td>FA40</td>
-         <td>匁▶斤</td>
-      </tr>
-    </table>
-    <h3 style="text-align:center;font-family:UbuntuMonoBold">0xFB__ Table</h3>
-    <table class="center" style="text-align:center;font-size:20px;font-family:UbuntuMonoBold;padding:20px">
+    <h2 style="font-family: UbuntuBold; text-align: center; font-size: 30px">
+      0x10-&gt;0xEC(UN): Basic Latin and math punctuations
+      <img
+        class="center"
+        src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/IMG_20231116_124819.jpg"
+      /><br />
+      <p style="font-size: 15px">
+        And also preview of 0xF___ tables(please note that every 0xF___ only
+        exclusive for specific countries)
+      </p>
+      0xF010-&gt;0xF031(UN): Japanese conversion units<br />
+      <img
+        class="center"
+        src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/IMG_20231116_124843.jpg"
+      /><br />
+      0xF110-&gt;0xF1EE(CN): Chinese characters<br />
+      <img
+        class="center"
+        src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/IMG_20231116_124907.jpg"
+      /><br />
+      0xF110-&gt;0xF1EE(JA): Japanese Katakana<br />
+      <img
+        class="center"
+        src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/Screenshot_2023_1214_122212.jpg"
+      /><br />
+      0xF210-&gt;0xF25B(JA): Japanese Kanji?
+      <img
+        class="center"
+        src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/Screenshot_20231116_123528.jpg"
+      /><br />
+      0xF310-&gt;0xF3D6(SR): Serbian Cyrillic alphabet
+      <img
+        class="center"
+        src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/Screenshot_2023_1116_123605.jpg"
+      /><br />
+      0xF410-&gt;0xF495(VN): Vietnamese vowel with accent marks
+      <img
+        class="center"
+        src="https://raw.githubusercontent.com/901D3/webcuahuy-901d3/main/assets/image/Screenshot_2023_1116_123626.jpg"
+      /><br />
+    </h2>
+    <h3 style="font-family: UbuntuBold; text-align: center">
+      src:<a href="https://cwh.caduo.eu.org">cwh.caduo.eu.org</a> changed domain
+      name to <a href="https://h.20142022.xyz">h.20142022.xyz</a>, original
+      created by Happy sheep.
+    </h3>
+    <table
+      style="
+        text-align: center;
+        font-size: 20px;
+        font-family: UbuntuMonoBold;
+        padding: 20px;
+      "
+    >
+      <h3 style="text-align: center; font-family: UbuntuMonoBold">
+        0xFA__ Table
+      </h3>
       <tr>
         <th>Hex</th>
         <th>Display</th>
@@ -1130,269 +1002,526 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
         <th></th>
         <th>Hex</th>
         <th>Display</th>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA01</td>
+        <td>ch▶yd</td>
+        <td></td>
+        <td>FA10</td>
+        <td>acre▶mile<sup>2</sup></td>
+        <td></td>
+        <td>FA20</td>
+        <td>尺▶間</td>
+        <td></td>
+        <td>FA30</td>
+        <td>畝▶反</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA02</td>
+        <td>yd▶ch</td>
+        <td></td>
+        <td>FA11</td>
+        <td>bu▶gal(UK)</td>
+        <td></td>
+        <td>FA21</td>
+        <td>町▶尺</td>
+        <td></td>
+        <td>FA31</td>
+        <td>町▶反</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA03</td>
+        <td>ch▶mile</td>
+        <td></td>
+        <td>FA12</td>
+        <td>gal(UK)▶bu</td>
+        <td></td>
+        <td>FA22</td>
+        <td>尺▶町</td>
+        <td></td>
+        <td>FA32</td>
+        <td>反▶町</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA04</td>
+        <td>mile▶ch</td>
+        <td></td>
+        <td>FA13</td>
+        <td>lb▶oz</td>
+        <td></td>
+        <td>FA23</td>
+        <td>町▶間</td>
+        <td></td>
+        <td>FA33</td>
+        <td>合▶升</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA05</td>
+        <td>mil▶in</td>
+        <td></td>
+        <td>FA14</td>
+        <td>oz▶lb</td>
+        <td></td>
+        <td>FA24</td>
+        <td>間▶町</td>
+        <td></td>
+        <td>FA34</td>
+        <td>升▶合</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA06</td>
+        <td>in▶mil</td>
+        <td></td>
+        <td>FA15</td>
+        <td>ton(long)▶oz</td>
+        <td></td>
+        <td>FA25</td>
+        <td>里▶間</td>
+        <td></td>
+        <td>FA35</td>
+        <td>斗▶升</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA07</td>
+        <td>fath▶in</td>
+        <td></td>
+        <td>FA16</td>
+        <td>oz▶ton(long)</td>
+        <td></td>
+        <td>FA26</td>
+        <td>間▶町</td>
+        <td></td>
+        <td>FA36</td>
+        <td>升▶斗</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA08</td>
+        <td>in▶fath</td>
+        <td></td>
+        <td>FA17</td>
+        <td>ton(long)▶lb</td>
+        <td></td>
+        <td>FA27</td>
+        <td>里▶町</td>
+        <td></td>
+        <td>FA37</td>
+        <td>石▶斗</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA09</td>
+        <td>fath▶ft</td>
+        <td></td>
+        <td>FA18</td>
+        <td>lb▶ton(long)</td>
+        <td></td>
+        <td>FA28</td>
+        <td>町▶里</td>
+        <td></td>
+        <td>FA38</td>
+        <td>斗▶石</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0A</td>
+        <td>ft▶fath</td>
+        <td></td>
+        <td>FA19</td>
+        <td>ton(short)▶oz</td>
+        <td></td>
+        <td>FA29</td>
+        <td>海里▶尺</td>
+        <td></td>
+        <td>FA39</td>
+        <td>勺▶合</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0B</td>
+        <td>fath▶yd</td>
+        <td></td>
+        <td>FA1A</td>
+        <td>oz▶ton(short)</td>
+        <td></td>
+        <td>FA2A</td>
+        <td>尺▶海里</td>
+        <td></td>
+        <td>FA3A</td>
+        <td>合▶勺</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0C</td>
+        <td>yd▶fath</td>
+        <td></td>
+        <td>FA1B</td>
+        <td>ton(short)▶lb</td>
+        <td></td>
+        <td>FA2B</td>
+        <td>丈▶尺</td>
+        <td></td>
+        <td>FA3B</td>
+        <td>匁▶貫</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0D</td>
+        <td>ha▶a</td>
+        <td></td>
+        <td>FA1C</td>
+        <td>lb▶ton(short)</td>
+        <td></td>
+        <td>FA2C</td>
+        <td>尺▶丈</td>
+        <td></td>
+        <td>FA3C</td>
+        <td>貫▶匁</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0E</td>
+        <td>a▶ha</td>
+        <td></td>
+        <td>FA1D</td>
+        <td>寸▶尺</td>
+        <td></td>
+        <td>FA2D</td>
+        <td>畝▶坪</td>
+        <td></td>
+        <td>FA3D</td>
+        <td>斤▶貫</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0F</td>
+        <td>mile²▶acre</td>
+        <td></td>
+        <td>FA1E</td>
+        <td>尺▶寸</td>
+        <td></td>
+        <td>FA2E</td>
+        <td>坪▶畝</td>
+        <td></td>
+        <td>FA3E</td>
+        <td>貫▶斤</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>FA1F</td>
+        <td>間▶尺</td>
+        <td></td>
+        <td>FA2F</td>
+        <td>反▶畝</td>
+        <td></td>
+        <td>FA3F</td>
+        <td>斤▶匁</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>FA40</td>
+        <td>匁▶斤</td>
+      </tr>
+    </table>
+    <h3 style="text-align: center; font-family: UbuntuMonoBold">
+      0xFB__ Table
+    </h3>
+    <table
+      class="center"
+      style="
+        text-align: center;
+        font-size: 20px;
+        font-family: UbuntuMonoBold;
+        padding: 20px;
+      "
+    >
+      <tr>
+        <th>Hex</th>
+        <th>Display</th>
         <th></th>
         <th>Hex</th>
         <th>Display</th>
-       </tr>
-      <tr class="hlfontcwxtableFB">
-         <td>FB01</td>
-         <td>&lt;</td>
-         <td></td>
-         <td>FB10</td>
-         <td>→M</td>
-         <td></td>
-         <td>FB20</td>
-         <td>MatA</td>
-         <td></td>
-         <td>FB30</td>
-         <td>⁰</td>
-         <td></td>
-         <td>FB40</td>
-         <td>;</td>
+        <td></td>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
       </tr>
       <tr class="hlfontcwxtableFB">
-         <td>FB02</td>
-         <td>&gt;</td>
-         <td></td>
-         <td>FB11</td>
-         <td>@</td>
-         <td></td>
-         <td>FB21</td>
-         <td>MatB</td>
-         <td></td>
-         <td>FB31</td>
-         <td>¹</td>
-         <td></td>
-         <td>FB41</td>
-         <td>R</td>
+        <td>FB01</td>
+        <td>&lt;</td>
+        <td></td>
+        <td>FB10</td>
+        <td>→M</td>
+        <td></td>
+        <td>FB20</td>
+        <td>MatA</td>
+        <td></td>
+        <td>FB30</td>
+        <td>⁰</td>
+        <td></td>
+        <td>FB40</td>
+        <td>;</td>
       </tr>
       <tr class="hlfontcwxtableFB">
-         <td>FB03</td>
-         <td>≠</td>
-         <td></td>
-         <td>FB12</td>
-         <td>→A</td>
-         <td></td>
-         <td>FB22</td>
-         <td>MatC</td>
-         <td></td>
-         <td>FB32</td>
-         <td>²</td>
-         <td></td>
-         <td>FB42</td>
-         <td>𝜃</td>
-      </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB04</td>
-         <td>≤</td>
-         <td></td>
-         <td>FB13</td>
-         <td>→B</td>
-         <td></td>
-         <td>FB23</td>
-         <td>MatD</td>
-         <td></td>
-         <td>FB33</td>
-         <td>³</td>
-         <td></td>
-         <td>FB43</td>
-         <td></td>
-      </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB05</td>
-         <td>≥</td>
-         <td></td>
-         <td>FB14</td>
-         <td>→C</td>
-         <td></td>
-         <td>FB24</td>
-         <td>MatAns</td>
-         <td></td>
-         <td>FB34</td>
-         <td>⁴</td>
-         <td></td>
-         <td>FB44</td>
-         <td>x</td>
-     </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB06</td>
-         <td>@</td>
-         <td></td>
-         <td>FB15</td>
-         <td>→D</td>
-         <td></td>
-         <td>FB25</td>
-         <td>VctA</td>
-         <td></td>
-         <td>FB35</td>
-         <td>⁵</td>
-         <td></td>
-         <td>FB45</td>
-         <td>¹</td>
-      </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB07</td>
-         <td>@</td>
-         <td></td>
-         <td>FB16</td>
-         <td>→E</td>
-         <td></td>
-         <td>FB26</td>
-         <td>VctB</td>
-         <td></td>
-         <td>FB36</td>
-         <td>⁶</td>
-         <td></td>
-         <td>FB46</td>
-         <td>²</td>
-      </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB08</td>
-         <td>@</td>
-         <td></td>
-         <td>FB17</td>
-         <td>→F</td>
-         <td></td>
-         <td>FB27</td>
-         <td>VctC</td>
-         <td></td>
-         <td>FB37</td>
-         <td>⁷</td>
-         <td></td>
-         <td>FB47</td>
-         <td>³</td>
-      </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB09</td>
-         <td>@</td>
-         <td></td>
-         <td>FB18</td>
-         <td>→𝒙</td>
-         <td></td>
-         <td>FB28</td>
-         <td>VctD</td>
-         <td></td>
-         <td>FB38</td>
-         <td>⁸</td>
-         <td></td>
-         <td>FB48</td>
-         <td>⁴</td>
+        <td>FB02</td>
+        <td>&gt;</td>
+        <td></td>
+        <td>FB11</td>
+        <td>@</td>
+        <td></td>
+        <td>FB21</td>
+        <td>MatB</td>
+        <td></td>
+        <td>FB31</td>
+        <td>¹</td>
+        <td></td>
+        <td>FB41</td>
+        <td>R</td>
       </tr>
       <tr class="hlfontcwxtableFB">
-         <td>FB0A</td>
-         <td>@</td>
-         <td></td>
-         <td>FB19</td>
-         <td>→𝒚</td>
-         <td></td>
-         <td>FB29</td>
-         <td>VctAns</td>
-         <td></td>
-         <td>FB39</td>
-         <td>⁹</td>
-         <td></td>
-         <td>FB49</td>
-         <td>⁵</td>
-      </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB0B</td>
-         <td>@</td>
-         <td></td>
-         <td>FB1A</td>
-         <td>M+</td>
-         <td></td>
-         <td>FB2A</td>
-         <td>@</td>
-         <td></td>
-         <td>FB3A</td>
-         <td></td>
-         <td></td>
-         <td>FB4A</td>
-         <td>⁶</td>
-      </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB0C</td>
-         <td>@</td>
-         <td></td>
-         <td>FB1B</td>
-         <td>M-</td>
-         <td></td>
-         <td>FB2B</td>
-         <td>@</td>
-         <td></td>
-         <td>FB3B</td>
-         <td></td>
-         <td></td>
-         <td>FB4B</td>
-         <td>⁷</td>
-      </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB0D</td>
-         <td>@</td>
-         <td></td>
-         <td>FB1C</td>
-         <td>→𝒛</td>
-         <td></td>
-         <td>FB2C</td>
-         <td>@</td>
-         <td></td>
-         <td>FB3C</td>
-         <td></td>
-         <td></td>
-         <td>FB4C</td>
-         <td>⁸</td>
-      </tr>
-     <tr class="hlfontcwxtableFB">
-         <td>FB0E</td>
-         <td>@</td>
-         <td></td>
-         <td>FB1D</td>
-         <td>@</td>
-         <td></td>
-         <td>FB2D</td>
-         <td>@</td>
-         <td></td>
-         <td>FB3D</td>
-         <td>'</td>
-         <td></td>
-         <td>FB4D</td>
-         <td>⁹</td>
+        <td>FB03</td>
+        <td>≠</td>
+        <td></td>
+        <td>FB12</td>
+        <td>→A</td>
+        <td></td>
+        <td>FB22</td>
+        <td>MatC</td>
+        <td></td>
+        <td>FB32</td>
+        <td>²</td>
+        <td></td>
+        <td>FB42</td>
+        <td>𝜃</td>
       </tr>
       <tr class="hlfontcwxtableFB">
-         <td>FB0F</td>
-         <td>@</td>
-         <td></td>
-         <td>FB1E</td>
-         <td>@</td>
-         <td></td>
-         <td>FB2E</td>
-         <td>@</td>
-         <td></td>
-         <td>FB3E</td>
-         <td>"</td>
-         <td></td>
-         <td>FB4E</td>
-         <td>Q</td>
-     </tr>
-     <tr class="hlfontcwxtableFB">
-         <td></td>
-         <td></td>
-         <td></td>
-         <td>FB1F</td>
-         <td>@</td>
-         <td></td>
-         <td>FB2F</td>
-         <td>@</td>
-         <td></td>
-         <td>FB3F</td>
-         <td>⇩</td>
-         <td></td>
-         <td>FB4F</td>
-         <td>@</td>
+        <td>FB04</td>
+        <td>≤</td>
+        <td></td>
+        <td>FB13</td>
+        <td>→B</td>
+        <td></td>
+        <td>FB23</td>
+        <td>MatD</td>
+        <td></td>
+        <td>FB33</td>
+        <td>³</td>
+        <td></td>
+        <td>FB43</td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB05</td>
+        <td>≥</td>
+        <td></td>
+        <td>FB14</td>
+        <td>→C</td>
+        <td></td>
+        <td>FB24</td>
+        <td>MatAns</td>
+        <td></td>
+        <td>FB34</td>
+        <td>⁴</td>
+        <td></td>
+        <td>FB44</td>
+        <td>x</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB06</td>
+        <td>@</td>
+        <td></td>
+        <td>FB15</td>
+        <td>→D</td>
+        <td></td>
+        <td>FB25</td>
+        <td>VctA</td>
+        <td></td>
+        <td>FB35</td>
+        <td>⁵</td>
+        <td></td>
+        <td>FB45</td>
+        <td>¹</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB07</td>
+        <td>@</td>
+        <td></td>
+        <td>FB16</td>
+        <td>→E</td>
+        <td></td>
+        <td>FB26</td>
+        <td>VctB</td>
+        <td></td>
+        <td>FB36</td>
+        <td>⁶</td>
+        <td></td>
+        <td>FB46</td>
+        <td>²</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB08</td>
+        <td>@</td>
+        <td></td>
+        <td>FB17</td>
+        <td>→F</td>
+        <td></td>
+        <td>FB27</td>
+        <td>VctC</td>
+        <td></td>
+        <td>FB37</td>
+        <td>⁷</td>
+        <td></td>
+        <td>FB47</td>
+        <td>³</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB09</td>
+        <td>@</td>
+        <td></td>
+        <td>FB18</td>
+        <td>→𝒙</td>
+        <td></td>
+        <td>FB28</td>
+        <td>VctD</td>
+        <td></td>
+        <td>FB38</td>
+        <td>⁸</td>
+        <td></td>
+        <td>FB48</td>
+        <td>⁴</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0A</td>
+        <td>@</td>
+        <td></td>
+        <td>FB19</td>
+        <td>→𝒚</td>
+        <td></td>
+        <td>FB29</td>
+        <td>VctAns</td>
+        <td></td>
+        <td>FB39</td>
+        <td>⁹</td>
+        <td></td>
+        <td>FB49</td>
+        <td>⁵</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0B</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1A</td>
+        <td>M+</td>
+        <td></td>
+        <td>FB2A</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3A</td>
+        <td></td>
+        <td></td>
+        <td>FB4A</td>
+        <td>⁶</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0C</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1B</td>
+        <td>M-</td>
+        <td></td>
+        <td>FB2B</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3B</td>
+        <td></td>
+        <td></td>
+        <td>FB4B</td>
+        <td>⁷</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0D</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1C</td>
+        <td>→𝒛</td>
+        <td></td>
+        <td>FB2C</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3C</td>
+        <td></td>
+        <td></td>
+        <td>FB4C</td>
+        <td>⁸</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0E</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1D</td>
+        <td>@</td>
+        <td></td>
+        <td>FB2D</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3D</td>
+        <td>'</td>
+        <td></td>
+        <td>FB4D</td>
+        <td>⁹</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0F</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1E</td>
+        <td>@</td>
+        <td></td>
+        <td>FB2E</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3E</td>
+        <td>"</td>
+        <td></td>
+        <td>FB4E</td>
+        <td>Q</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>FB1F</td>
+        <td>@</td>
+        <td></td>
+        <td>FB2F</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3F</td>
+        <td>⇩</td>
+        <td></td>
+        <td>FB4F</td>
+        <td>@</td>
       </tr>
     </table>
-    <h3 style="text-align:center;font-family:UbuntuMonoBold">0xFD__ Table</h3>
-    <table class="center" style="text-align:center;font-size:20px;font-family:UbuntuMonoBold;padding:20px">
+    <h3 style="text-align: center; font-family: UbuntuMonoBold">
+      0xFD__ Table
+    </h3>
+    <table
+      class="center"
+      style="
+        text-align: center;
+        font-size: 20px;
+        font-family: UbuntuMonoBold;
+        padding: 20px;
+      "
+    >
       <tr>
         <th>Hex</th>
         <th>Display</th>
@@ -1717,11 +1846,76 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
         <td>@</td>
       </tr>
     </table>
-    <h3 style="text-align:center;font-family:UbuntuMonoBold">0xFE__ Table</h3>
-    <table class="center" style="text-align:center;font-size:20px;font-family:UbuntuMonoBold;padding:20px">
-      <tr><th>Hex</th> <th>Display</th> <th></th> <th>Hex</th> <th>Display</th> <td></td> <th>Hex</th> <th>Display</th> <th></th> <th>Hex</th> <th>Display</th> <th></th> <th>Hex</th> <th>Display</th> <th></th> <th>Hex</th> <th>Display</th></tr>
-      <tr><td>FE01</td> <td>in▸cm</td> <td></td> <td>FE10</td> <td>L▸gal(UK)</td> <td></td> <td>FE20</td> <td></td> <td></td> <td>FE30</td> <td></td> <td></td> <td>FE40</td> <td></td> <td></td> <td>FE50</td> <td></td> <td></td></tr>
-      <tr> <td>FE02</td> <td>cm▸in</td> <td></td> <td>FE11</td> <td>pc▸km</td> <td></td> <td>FE21</td> <td></td> <td></td> <td>FE31</td> <td></td> <td></td> <td>FE41</td> <td></td> <td></td> <td>FE51</td> <td></td> <td></td>
+    <h3 style="text-align: center; font-family: UbuntuMonoBold">
+      0xFE__ Table
+    </h3>
+    <table
+      class="center"
+      style="
+        text-align: center;
+        font-size: 20px;
+        font-family: UbuntuMonoBold;
+        padding: 20px;
+      "
+    >
+      <tr>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <td></td>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+      </tr>
+      <tr>
+        <td>FE01</td>
+        <td>in▸cm</td>
+        <td></td>
+        <td>FE10</td>
+        <td>L▸gal(UK)</td>
+        <td></td>
+        <td>FE20</td>
+        <td></td>
+        <td></td>
+        <td>FE30</td>
+        <td></td>
+        <td></td>
+        <td>FE40</td>
+        <td></td>
+        <td></td>
+        <td>FE50</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>FE02</td>
+        <td>cm▸in</td>
+        <td></td>
+        <td>FE11</td>
+        <td>pc▸km</td>
+        <td></td>
+        <td>FE21</td>
+        <td></td>
+        <td></td>
+        <td>FE31</td>
+        <td></td>
+        <td></td>
+        <td>FE41</td>
+        <td></td>
+        <td></td>
+        <td>FE51</td>
+        <td></td>
+        <td></td>
       </tr>
       <tr>
         <td>FE03</td>
@@ -2004,6 +2198,8 @@ document.getElementById('myTable').addEventListener('mouseover', function(event)
         <td></td>
       </tr>
     </table>
-    <h5 style="font-family:UbuntuBold;text-align:center">All 0x0000 to 0x____ generated with user's tools by user202729, gwetm.</h5>
+    <h5 style="font-family: UbuntuBold; text-align: center">
+      All 0x0000 to 0x____ generated with user's tools by user202729, gwetm.
+    </h5>
   </body>
 </html>
