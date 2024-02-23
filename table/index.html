@@ -31,15 +31,13 @@
         background-color: #eaeaea;
         color: #000000;
         transition: background-color 0.5s, color 0.5s;
-        overflow-x: hidden;
-        justify-content: center;
-        width: 2500px;
+        overflow-x: ;
       }
       .dark-mode {
         background-color: #212121;
         color: #ffffff;
       }
-      @media only screen and (max-width: 480px) {
+      @media and (max-width: 720px) {
         body {
           width: auto;
           font-size: 45px;
@@ -84,7 +82,8 @@
         td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)):not(:nth-child(15)):not(:nth-child(16)) {
         font-family: Classwiz-X;
       }
-      tr.hlfontcwxtableFE td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)):not(:nth-child(15)):not(:nth-child(16)):not(:nth-child(18)):not(:nth-child(19)):not(:nth-child(21)):not(:nth-child(22)) {
+      tr.hlfontcwxtableFE
+        td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)):not(:nth-child(15)):not(:nth-child(16)):not(:nth-child(18)):not(:nth-child(19)):not(:nth-child(21)):not(:nth-child(22)) {
         font-family: Classwiz-X;
       }
 
@@ -98,7 +97,7 @@
     </style>
   </head>
   <body>
-    <h6 style="font-size:20px;text-align:left">
+    <h6 style="font-size: 20px; text-align: left">
       background-color:<br />
       <button
         onclick="toggleMode()"
@@ -131,7 +130,54 @@
         }
       </script>
       <br />
-      <br />
+      <div id="sliderValue"></div>
+      Width:
+      <input
+        type="number"
+        id="sliderNumber"
+        min="5"
+        max="15360"
+        value="3840"
+        style="width: 50px; font-size: 18px"
+      />px<br />
+      <input
+        type="range"
+        min="10"
+        max="15360"
+        value="3840"
+        class="slider"
+        style="width: 350px; height: 30%"
+        id="myRange"
+      />
+
+      <script>
+          var slider = document.getElementById("myRange");
+          var body = document.body;
+          var sliderValue = document.getElementById("sliderValue");
+
+
+        slider.oninput = function() {
+              var val = parseInt(this.value);
+              body.style.width = val + "px";
+              if (sliderNumber) {
+                  sliderNumber.value = val; // Update input field value
+              }
+          }
+        
+          var sliderNumber = null;
+
+          sliderNumber = document.getElementById('sliderNumber');
+
+          sliderNumber.addEventListener('input', function() {
+              var val = parseInt(this.value);
+              if (val >= parseInt(this.getAttribute('min')) && val <= parseInt(this.getAttribute('max'))) {
+                  slider.value = val;
+                  body.style.width = val + "px";
+                  sliderValue.textContent = val + "px";
+              }
+          });
+      </script>
+
       Document site<br />
     </h6>
     <h1 style="text-align: center; font-size: 75px; font-family: UbuntuR">
