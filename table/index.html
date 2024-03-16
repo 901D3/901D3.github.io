@@ -31,7 +31,6 @@
         background-color: #eaeaea;
         color: #000000;
         transition: background-color 0.5s, color 0.5s;
-        overflow-x: ;
       }
       .dark-mode {
         background-color: #212121;
@@ -97,12 +96,17 @@
     </style>
   </head>
   <body>
-    <h6 style="font-size: 20px; text-align: left">
+    <h6 style="font-size: 20px; text-align: left; font-family: UbuntuMonoBold">
       background-color:<br />
       <button
         onclick="toggleMode()"
         id="modeButton"
-        style="background-color: white; font-size: 14px; color: grey"
+        style="
+          background-color: white;
+          font-size: 14px;
+          color: grey;
+          font-family: UbuntuMonoBold;
+        "
       >
         Toggle background color
       </button>
@@ -130,7 +134,7 @@
         }
       </script>
       <br />
-      <div id="sliderValue"></div>
+      Min width: 10px, max width: 15360px[16K], default width: 3840px[4K]<br />
       Width:
       <input
         type="number"
@@ -138,7 +142,7 @@
         min="5"
         max="15360"
         value="3840"
-        style="width: 50px; font-size: 18px"
+        style="width: 75px; font-size: 18px; font-family: UbuntuR"
       />px<br />
       <input
         type="range"
@@ -151,33 +155,35 @@
       />
 
       <script>
-          var slider = document.getElementById("myRange");
-          var body = document.body;
-          var sliderValue = document.getElementById("sliderValue");
+        var slider = document.getElementById("myRange");
+        var body = document.body;
+        var sliderValue = document.getElementById("sliderValue");
 
-
-        slider.oninput = function() {
-              var val = parseInt(this.value);
-              body.style.width = val + "px";
-              if (sliderNumber) {
-                  sliderNumber.value = val; // Update input field value
-              }
+        slider.oninput = function () {
+          var val = parseInt(this.value);
+          body.style.width = val + "px";
+          if (sliderNumber) {
+            sliderNumber.value = val; // Update input field value
           }
-        
-          var sliderNumber = null;
+        };
 
-          sliderNumber = document.getElementById('sliderNumber');
+        var sliderNumber = null;
 
-          sliderNumber.addEventListener('input', function() {
-              var val = parseInt(this.value);
-              if (val >= parseInt(this.getAttribute('min')) && val <= parseInt(this.getAttribute('max'))) {
-                  slider.value = val;
-                  body.style.width = val + "px";
-                  sliderValue.textContent = val + "px";
-              }
-          });
+        sliderNumber = document.getElementById("sliderNumber");
+
+        sliderNumber.addEventListener("input", function () {
+          var val = parseInt(this.value);
+          if (
+            val >= parseInt(this.getAttribute("min")) &&
+            val <= parseInt(this.getAttribute("max"))
+          ) {
+            slider.value = val;
+            body.style.width = val + "px";
+            sliderValue.textContent = val + "px";
+          }
+        });
       </script>
-
+      <br />
       Document site<br />
     </h6>
     <h1 style="text-align: center; font-size: 75px; font-family: UbuntuR">
@@ -1013,6 +1019,10 @@
       name to <a href="https://h.20142022.xyz">h.20142022.xyz</a>, original
       created by Happy sheep.
     </h3>
+    <p style="text-align: center; font-family: UbuntuBold">
+      All table below are missed some characters byte because these character
+      are glitched,it will be unlisted
+    </p>
     <table
       style="
         text-align: center;
@@ -2065,7 +2075,7 @@
         <td>mile/h▸m/s</td>
         <td></td>
         <td>FE75</td>
-        <td></td>
+        <td>dyn/cm²▸Pa</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td>FE07</td>
@@ -2090,7 +2100,7 @@
         <td>m/s▸mile/h</td>
         <td></td>
         <td>FE76</td>
-        <td></td>
+        <td>Pa▸dyn/cm²</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td>FE08</td>
@@ -2115,7 +2125,7 @@
         <td>knot▸m/s</td>
         <td></td>
         <td>FE77</td>
-        <td></td>
+        <td>lbf/in²▸Pa</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td>FE09</td>
@@ -2140,7 +2150,7 @@
         <td>m/s▸knot</td>
         <td></td>
         <td>FE78</td>
-        <td></td>
+        <td>Pa▸lbf/in²</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td>FE0A</td>
@@ -2165,7 +2175,7 @@
         <td>Gal▸m/s²</td>
         <td></td>
         <td>FE79</td>
-        <td></td>
+        <td>mmH₂O▸Pa</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td>FE0B</td>
@@ -2190,7 +2200,7 @@
         <td>m/s²▸Gal</td>
         <td></td>
         <td>FE7A</td>
-        <td></td>
+        <td>Pa▸mmH₂O</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td>FE0C</td>
@@ -2215,7 +2225,7 @@
         <td>N*m▸dyn*cm</td>
         <td></td>
         <td>FE7B</td>
-        <td></td>
+        <td>inHg▸Pa</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td>FE0D</td>
@@ -2240,7 +2250,7 @@
         <td>dyn*cm▸N*m</td>
         <td></td>
         <td>FE7C</td>
-        <td></td>
+        <td>Pa▸inHg</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td>FE0E</td>
@@ -2265,7 +2275,7 @@
         <td>dyn▸N</td>
         <td></td>
         <td>FE7D</td>
-        <td></td>
+        <td>erg▸J</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td>FE0F</td>
@@ -2290,7 +2300,7 @@
         <td>N▸dyn</td>
         <td></td>
         <td>FE7E</td>
-        <td></td>
+        <td>J▸erg</td>
       </tr>
       <tr class="hlfontcwxtableFE">
         <td></td>
@@ -2315,6 +2325,431 @@
         <td>lbf▸N</td>
         <td></td>
         <td>FE7F</td>
+        <td>eV▸J</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE80</td>
+        <td>J▸eV</td>
+        <td></td>
+        <td>FE90</td>
+        <td>m²/s▸St</td>
+        <td></td>
+        <td>FEA0</td>
+        <td></td>
+        <td></td>
+        <td>FEB0</td>
+        <td></td>
+        <td></td>
+        <td>FEC0</td>
+        <td></td>
+        <td></td>
+        <td>FED0</td>
+        <td></td>
+        <td></td>
+        <td>FEE0</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE81</td>
+        <td>J▸eV</td>
+        <td></td>
+        <td>FE91</td>
+        <td>G▸T</td>
+        <td></td>
+        <td>FEA1</td>
+        <td></td>
+        <td></td>
+        <td>FEB1</td>
+        <td></td>
+        <td></td>
+        <td>FEC1</td>
+        <td></td>
+        <td></td>
+        <td>FED1</td>
+        <td></td>
+        <td></td>
+        <td>FEE1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE82</td>
+        <td>J▸Btu</td>
+        <td></td>
+        <td>FE92</td>
+        <td>T▸G</td>
+        <td></td>
+        <td>FEA2</td>
+        <td></td>
+        <td></td>
+        <td>FEB2</td>
+        <td></td>
+        <td></td>
+        <td>FEC2</td>
+        <td></td>
+        <td></td>
+        <td>FED2</td>
+        <td></td>
+        <td></td>
+        <td>FEE2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE83</td>
+        <td>calɪᴛ▸J</td>
+        <td></td>
+        <td>FE93</td>
+        <td>Oe▸A/m</td>
+        <td></td>
+        <td>FEA3</td>
+        <td></td>
+        <td></td>
+        <td>FEB3</td>
+        <td></td>
+        <td></td>
+        <td>FEC3</td>
+        <td></td>
+        <td></td>
+        <td>FED3</td>
+        <td></td>
+        <td></td>
+        <td>FEE3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE84</td>
+        <td>J▸calɪᴛ</td>
+        <td></td>
+        <td>FE94</td>
+        <td>A/m▸Oe</td>
+        <td></td>
+        <td>FEA4</td>
+        <td></td>
+        <td></td>
+        <td>FEB4</td>
+        <td></td>
+        <td></td>
+        <td>FEC4</td>
+        <td></td>
+        <td></td>
+        <td>FED4</td>
+        <td></td>
+        <td></td>
+        <td>FEE4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE85</td>
+        <td>calₜₕ▸J</td>
+        <td></td>
+        <td>FE95</td>
+        <td>Mx▸Wb</td>
+        <td></td>
+        <td>FEA5</td>
+        <td></td>
+        <td></td>
+        <td>FEB5</td>
+        <td></td>
+        <td></td>
+        <td>FEC5</td>
+        <td></td>
+        <td></td>
+        <td>FED5</td>
+        <td></td>
+        <td></td>
+        <td>FEE5</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE86</td>
+        <td>calₜₕ▸J</td>
+        <td></td>
+        <td>FE96</td>
+        <td>Wb▸Mx</td>
+        <td></td>
+        <td>FEA6</td>
+        <td></td>
+        <td></td>
+        <td>FEB6</td>
+        <td></td>
+        <td></td>
+        <td>FEC6</td>
+        <td></td>
+        <td></td>
+        <td>FEC6</td>
+        <td></td>
+        <td></td>
+        <td>FEE6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE87</td>
+        <td>kW*h▸J</td>
+        <td></td>
+        <td>FE97</td>
+        <td>𝛾▸T</td>
+        <td></td>
+        <td>FEA7</td>
+        <td></td>
+        <td></td>
+        <td>FEB7</td>
+        <td></td>
+        <td></td>
+        <td>FEC7</td>
+        <td></td>
+        <td></td>
+        <td>FEC7</td>
+        <td></td>
+        <td></td>
+        <td>FEE7</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE88</td>
+        <td>J▸kW*h</td>
+        <td></td>
+        <td>FE98</td>
+        <td>T▸𝛾</td>
+        <td></td>
+        <td>FEA8</td>
+        <td></td>
+        <td></td>
+        <td>FEB8</td>
+        <td></td>
+        <td></td>
+        <td>FEC8</td>
+        <td></td>
+        <td></td>
+        <td>FED8</td>
+        <td></td>
+        <td></td>
+        <td>FEE8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE89</td>
+        <td>Btu/min▸W</td>
+        <td></td>
+        <td>FE99</td>
+        <td>sb▸cd/m²</td>
+        <td></td>
+        <td>FEA9</td>
+        <td></td>
+        <td></td>
+        <td>FEB9</td>
+        <td></td>
+        <td></td>
+        <td>FEC9</td>
+        <td></td>
+        <td></td>
+        <td>FED9</td>
+        <td></td>
+        <td></td>
+        <td>FEE9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8A</td>
+        <td>W▸Btu/min</td>
+        <td></td>
+        <td>FE9A</td>
+        <td>cd/m²▸sb</td>
+        <td></td>
+        <td>FEAA</td>
+        <td></td>
+        <td></td>
+        <td>FEBA</td>
+        <td></td>
+        <td></td>
+        <td>FECA</td>
+        <td></td>
+        <td></td>
+        <td>FEDA</td>
+        <td></td>
+        <td></td>
+        <td>FEEA</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8B</td>
+        <td>▸J</td>
+        <td></td>
+        <td>FE9B</td>
+        <td>ph▸lx</td>
+        <td></td>
+        <td>FEAB</td>
+        <td></td>
+        <td></td>
+        <td>FEBB</td>
+        <td></td>
+        <td></td>
+        <td>FECB</td>
+        <td></td>
+        <td></td>
+        <td>FEDB</td>
+        <td></td>
+        <td></td>
+        <td>FEEB</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8C</td>
+        <td>J▸</td>
+        <td></td>
+        <td>FE9C</td>
+        <td>lx▸ph</td>
+        <td></td>
+        <td>FEAC</td>
+        <td></td>
+        <td></td>
+        <td>FEBC</td>
+        <td></td>
+        <td></td>
+        <td>FECC</td>
+        <td></td>
+        <td></td>
+        <td>FEDC</td>
+        <td></td>
+        <td></td>
+        <td>FEEC</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8D</td>
+        <td>P▸Pa*s</td>
+        <td></td>
+        <td>FE9D</td>
+        <td>Ci▸Bq</td>
+        <td></td>
+        <td>FEAD</td>
+        <td></td>
+        <td></td>
+        <td>FEBD</td>
+        <td></td>
+        <td></td>
+        <td>FECD</td>
+        <td></td>
+        <td></td>
+        <td>FEDD</td>
+        <td></td>
+        <td></td>
+        <td>FEED</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8E</td>
+        <td>Pa*s▸P</td>
+        <td></td>
+        <td>FE9E</td>
+        <td>Bq▸Ci</td>
+        <td></td>
+        <td>FEAE</td>
+        <td></td>
+        <td></td>
+        <td>FEBE</td>
+        <td></td>
+        <td></td>
+        <td>FECE</td>
+        <td></td>
+        <td></td>
+        <td>FEDE</td>
+        <td></td>
+        <td></td>
+        <td>FEEE</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8F</td>
+        <td>St▸m²/s</td>
+        <td></td>
+        <td>FE9F</td>
+        <td>rad▸Gy</td>
+        <td></td>
+        <td>FEAF</td>
+        <td></td>
+        <td></td>
+        <td>FEBF</td>
+        <td></td>
+        <td></td>
+        <td>FECF</td>
+        <td></td>
+        <td></td>
+        <td>FEDF</td>
+        <td></td>
+        <td></td>
+        <td>FEEF</td>
+        <td></td>
+        <td></td>
+        <td></td>
         <td></td>
       </tr>
     </table>
