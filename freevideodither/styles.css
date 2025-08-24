@@ -1,0 +1,415 @@
+@import url("styles/$_.css");
+
+@font-face {
+  font-family: "UbuntuBold";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/Ubuntu-B.ttf");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/Ubuntu-B.ttf")
+    format("woff");
+}
+@font-face {
+  font-family: "UbuntuLow";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-L.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-L.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "UbuntuLowItalic";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-LI.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-LI.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "UbuntuMedium";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-M.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-M.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "UbuntuMediumItalic";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-MI.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-MI.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "UbuntuR";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-R.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-R.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "UbuntuRI";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-RI.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-RI.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "UbuntuTh";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-Th.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/Ubuntu-Th.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "UbuntuMonoBold";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/UbuntuMono-B.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/UbuntuMono-B.woff2")
+    format("woff");
+}
+@font-face {
+  font-family: "UbuntuMonoR";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/UbuntuMono-R.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Ubuntu/woff2/UbuntuMono-R.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Trebuchet-MS";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Trebuchet MS/trebuc.ttf");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Trebuchet MS/trebuc.ttf")
+    format("woff2");
+}
+@font-face {
+  font-family: "Classwiz-X";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Calculator font/Casio/Classwiz X/ClassWizXDisplay-Regular.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Calculator font/Casio/Classwiz X/ClassWizXDisplay-Regular.woff2")
+    format("woff2");
+}
+@font-face {
+  font-family: "Classwiz-CW";
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Calculator%20font/Casio/Classwiz%20CW/cwcwd.woff2");
+  src: url("https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/assets/font/Calculator%20font/Casio/Classwiz%20CW/cwcwd.woff2")
+    format("woff2");
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  height: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #232323;
+  height: 18px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ea7010;
+  height: 15px;
+}
+
+::-webkit-resizer {
+  background: #ff9040;
+  border-top-left-radius: 7px;
+  border-bottom-right-radius: 6px;
+}
+
+.resizable {
+  overflow: hidden;
+  resize: both;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  accent-color: #ff9d00;
+  font-family: UbuntuR;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  margin: 10px;
+  font-size: 15px;
+  width: auto;
+  overflow-x: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-family: UbuntuR;
+  color: #ffffff;
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+}
+
+label {
+  margin: 0px;
+  font-family: UbuntuR;
+  color: #ffffff;
+  box-sizing: border-box;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+input {
+  background-color: #000;
+  color: #e0e0e0;
+  border: 3px solid #ea7010;
+  padding: 2px;
+  border-radius: 10px;
+  font-family: Classwiz-X;
+  font-size: 12px;
+  margin-right: 5px;
+  max-width: 300px;
+  vertical-align: middle;
+  line-height: normal;
+  display: inline-block;
+  transition: background-color 200ms;
+}
+
+select {
+  background-color: #000;
+  color: #e0e0e0;
+  border: 3px solid #ea7010;
+  padding: 2px;
+  border-radius: 10px;
+  font-family: Classwiz-X;
+  font-size: 15px;
+  margin-right: 5px;
+  transition: background-color 200ms;
+}
+
+textarea {
+  background-color: #000;
+  color: #e0e0e0;
+  border: 3px solid #ea7010;
+  padding: 4px;
+  border-radius: 10px;
+  font-family: Classwiz-X;
+  font-size: 10px;
+  margin-right: 10px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  padding: 2px;
+  cursor: pointer;
+  display: inline-block;
+  width: 200px;
+  height: 12px;
+}
+
+input[type="range"]:hover {
+  -webkit-appearance: none;
+  appearance: none;
+  cursor: pointer;
+  border-radius: auto;
+}
+
+input[type="checkbox"] {
+  display: inline-flex;
+  justify-content: center;
+  position: relative;
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
+}
+
+input[type="file"] {
+  padding: 3px;
+  cursor: pointer;
+  border-radius: auto;
+}
+
+input:hover,
+button:hover,
+select:hover {
+  background-color: #793400;
+  border-color: #ea7010;
+}
+button {
+  background-color: #000;
+  color: #e0e0e0;
+  border: 2px solid #ea7010;
+  padding: 3px;
+  border-radius: 10px;
+  font-family: UbuntuBold;
+  font-size: 12px;
+  margin-right: 10px;
+  max-width: 100%;
+  transition: background-color 200ms;
+}
+button[disabled] {
+  background-color: #333333;
+  color: #e0e0e0;
+  border: 2px solid #555555;
+  padding: 4px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 15px;
+  margin-right: 10px;
+}
+
+button[disabled]:hover {
+  background-color: #555555;
+  border-color: #555555;
+}
+
+video {
+  align-self: center;
+  image-rendering: pixelated;
+}
+
+canvas {
+  aspect-ratio: inherit;
+  text-align: left;
+  transform-origin: top left;
+  position: relative;
+  display: inline-block;
+  align-self: center;
+  image-rendering: pixelated;
+}
+
+#console {
+  background: #000000;
+  color: #00ff00;
+  font-family: Unifont, monospace;
+  font-size: 16px;
+  height: 1000px;
+  padding: 4px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+}
+
+hr {
+  text-align: left;
+  width: 100%;
+}
+
+.glowfire {
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00);
+  background-size: cover;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+select {
+  background-color: #000;
+  color: #fff;
+}
+
+#docs {
+  text-align: left;
+}
+
+.controls {
+  background-color: #090909;
+  border-radius: 10px;
+  margin: 0px;
+  position: relative;
+  resize: both;
+}
+
+.previewContainer {
+  flex-direction: column;
+  background-color: #090909;
+  border-radius: 10px;
+  max-width: max-content;
+  margin: 0px;
+  justify-content: center;
+  align-self: center;
+}
+
+.videoControls {
+  background-color: #e14f00;
+  border: 8px solid #1b1b1b;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: max-content;
+}
+
+.canvasControls {
+  background-color: #e14f00;
+  border: 8px solid #1b1b1b;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: max-content;
+}
+
+a {
+  color: #ea7030;
+}
+
+.recorder {
+  display: grid;
+  grid-template-columns: repeat(2, 7%);
+  grid-template-rows: auto auto;
+  gap: 15px;
+}
+
+.recorder h2 {
+  grid-row: -4;
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+.recorder button {
+  padding: 7px;
+  font-size: 15px;
+  cursor: pointer;
+  text-align: center;
+  width: 100%;
+}
+
+.recorder .span1 {
+  text-align: center;
+  grid-row: 3;
+  grid-column: 1;
+}
+.recorder .span2 {
+  text-align: center;
+  grid-row: 3;
+  grid-column: 2;
+}
+
+.bigContainer {
+  display: grid;
+  grid-template-areas:
+    "controls previewContainer"
+    "preview previewContainer";
+  grid-template-columns: auto 1fr;
+  grid-template-rows: 1fr auto;
+  justify-items: center;
+  align-items: center;
+  overflow: auto;
+  border-top: 8px solid #1b1b1b;
+  border-bottom: 8px solid #1b1b1b;
+  border-radius: 5px;
+  height: 150%;
+  resize: both;
+}
+
+.preview {
+  grid-area: preview;
+
+  background: #fff;
+  align-content: center;
+  justify-content: center;
+}
+
+.mainVideo {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.mainCanvas {
+  justify-content: center;
+  flex-direction: column;
+}
+
+.firehr {
+  width: 99%;
+  height: 1px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  background: linear-gradient(to right, #ff0000, #ff7f00, #ffff00);
+}
