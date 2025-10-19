@@ -24,5 +24,5 @@ Free JS implementation of Void and Cluster method by Robert Ulichney and other m
 [901d3.github.io/blue-noise.js](https://901d3.github.io/blue-noise.js)
 
 5. _**PBIN-Packer**_\
-Pack Source 1 Panorama into a valid .pbin file
+Pack Source 1 Panorama into a valid .pbin file\
 [github.com/901D3/PBIN-Packer](https://github.com/901D3/PBIN-Packer)
