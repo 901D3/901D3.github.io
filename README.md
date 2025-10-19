@@ -25,3 +25,7 @@ Free JS implementation of Void and Cluster method by Robert Ulichney and other m
 5. _**PBIN-Packer**_\
 Pack Source 1 Panorama into a valid .pbin file\
 [github.com/901D3/PBIN-Packer](https://github.com/901D3/PBIN-Packer)
+
+---
+
+_The license on this repository does not mean all repository listed above uses it_
