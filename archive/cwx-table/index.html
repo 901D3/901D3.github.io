@@ -1,0 +1,3044 @@
+<!DOCTYPE html>
+<!--
+
+  _   _ _____ __  __ _     
+ | | | |_   _|  \/  | |    
+ | |_| | | | | |\/| | |    
+ |  _  | | | | |  | | |___ 
+ |_| |_| |_| |_|  |_|_____|
+                           
+
+-->
+<html>
+  <head>
+    <meta
+      name="viewport"
+      http-equiv="CONTENT-TYPE"
+      content="text/html; initial-scale=0.50;charset=UTF-8"
+    />
+    <link
+      rel="stylesheet"
+      href="https://raw.githubusercontent.com/901D3/901D3.github.io/branchcuahuy/styles/style.css"
+    />
+    <link rel="stylesheet" href="https://901d3.glitch.me/styles/style.css" />
+    <title>Full CWI-CWX table</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 3px solid;
+        border-collapse: collapse;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      table {
+      }
+      th,
+      td {
+        padding: 12px;
+      }
+      .hlfontcwx {
+        font-family: Classwiz-X;
+      }
+      tr.hlfontcwxRow td:not(:first-child) {
+        font-family: Classwiz-X;
+      }
+      tr.hlfontcwxtableFA
+        td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)) {
+        font-family: Classwiz-X;
+      }
+      tr.hlfontcwxtableFB
+        td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)) {
+        font-family: Classwiz-X;
+      }
+      tr.hlfontcwxtableFD
+        td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)):not(:nth-child(15)):not(:nth-child(16)) {
+        font-family: Classwiz-X;
+      }
+      tr.hlfontcwxtableFE
+        td:not(:first-child):not(:nth-child(3)):not(:nth-child(4)):not(:nth-child(6)):not(:nth-child(7)):not(:nth-child(9)):not(:nth-child(10)):not(:nth-child(12)):not(:nth-child(13)):not(:nth-child(15)):not(:nth-child(16)):not(:nth-child(18)):not(:nth-child(19)):not(:nth-child(21)):not(:nth-child(22)) {
+        font-family: Classwiz-X;
+      }
+
+      .tooltip {
+        position: absolute;
+        background-color: #000000;
+        padding: 5px;
+        border: 2px solid yellow;
+        display: none;
+      }
+    </style>
+  </head>
+  <body style="background-color: #212121; color: white">
+    <h6 style="font-size: 20px; text-align: left; font-family: UbuntuMonoBold">
+      Settings:<br />
+      background-color:#212121
+      <br />
+      Min width: 10px, max width: 15360px(16K), default width: 3840px(4K)<br />
+      Width:
+      <input
+        type="number"
+        id="sliderNumber"
+        min="5"
+        max="15360"
+        value="3840"
+        style="width: 75px; font-size: 18px; font-family: UbuntuR"
+      />px<br />
+      <input
+        type="range"
+        min="10"
+        max="15360"
+        value="3840"
+        class="slider"
+        style="width: 350px; height: 30%"
+        id="myRange"
+      />
+
+      <script>
+        var slider = document.getElementById("myRange");
+        var body = document.body;
+        var sliderValue = document.getElementById("sliderValue");
+
+        slider.oninput = function () {
+          var val = parseInt(this.value);
+          body.style.width = val + "px";
+          if (sliderNumber) {
+            sliderNumber.value = val; // Update input field value
+          }
+        };
+
+        var sliderNumber = null;
+
+        sliderNumber = document.getElementById("sliderNumber");
+
+        sliderNumber.addEventListener("input", function () {
+          var val = parseInt(this.value);
+          if (
+            val >= parseInt(this.getAttribute("min")) &&
+            val <= parseInt(this.getAttribute("max"))
+          ) {
+            slider.value = val;
+            body.style.width = val + "px";
+            sliderValue.textContent = val + "px";
+          }
+        });
+      </script>
+      <br />
+      Document site<br />
+    </h6>
+    <h1 style="text-align: center; font-size: 75px; font-family: UbuntuR">
+      The full CWI/CWX table?
+    </h1>
+    <p style="font-family: UbuntuLow; text-align: center">
+      <b>Note:</b><br />
+      <b>s:shift</b><br />
+      <b>alp/a:alpha</b><br />
+      <b
+        >^ v &lt; &gt;:up,down,left,right<br />
+        logab:log (logarithm)<br />
+        (…)<br />
+        […]<br />
+        {…}<br />
+        &lt;…&gt;<br />
+        Thank you for visit my website
+        <span style="font-family: verdana; font-size: 25px">.͜.</span></b
+      >
+    </p>
+    <table
+      class="center"
+      style="text-align: center; font-family: UbuntuMonoBold"
+    >
+      <h3 style="text-align: center; font-family: UbuntuMonoBold">
+        <b>Hex pointers</b>
+      </h3>
+      <tr>
+        <td style="font-size: 18px"><b>Hex</b></td>
+        <td style="font-size: 18px"><b>Pointer</b></td>
+        <td style="font-size: 18px"><b>Operation</b></td>
+      </tr>
+      <tr>
+        <td style="font-size: 20px">0x3A</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
+        <td>S 7 3 7</td>
+      </tr>
+      <tr>
+        <td style="font-size: 20px">0x3B</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
+        <td>S 7 3 8</td>
+      </tr>
+      <tr>
+        <td style="font-size: 20px">0x3C</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
+        <td>S 7 3 9</td>
+      </tr>
+      <tr>
+        <td style="font-size: 20px">0x3D</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
+        <td>S 7 3 (-)</td>
+      </tr>
+      <tr>
+        <td style="font-size: 20px">0x3E</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
+        <td>S 7 3 °°°</td>
+      </tr>
+      <tr>
+        <td style="font-size: 20px">0x3F</td>
+        <td style="font-size: 25px; font-family: Classwiz-X"></td>
+        <td>S 7 3 x<sup>-1</sup></td>
+      </tr>
+    </table>
+    <h1 style="text-align: center">______________________________</h1>
+    <h3 style="text-align: center; font-family: UbuntuMonoBold">
+      Uppercase Latin alphabet
+    </h3>
+    <table
+      class="center"
+      style="text-align: center; font-family: 'UbuntuMonoBold'"
+    >
+      <tr>
+        <th>Hex</th>
+        <th>Chars</th>
+        <th>Display</th>
+        <th>Operation</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Chars</th>
+        <th>Display</th>
+        <th>Operation</th>
+      </tr>
+      <tr>
+        <td>41</td>
+        <td style="font-family: Classwiz-X">A</td>
+        <td style="font-family: Classwiz-X">Ans</td>
+        <td>Ans</td>
+        <td></td>
+        <td>50</td>
+        <td style="font-family: Classwiz-X">P</td>
+        <td style="font-family: Classwiz-X">∑(</td>
+        <td>s (x)</td>
+      </tr>
+      <tr>
+        <td>42</td>
+        <td style="font-family: Classwiz-X">B</td>
+        <td style="font-family: Classwiz-X">A</td>
+        <td>Alp (-)</td>
+        <td></td>
+        <td>51</td>
+        <td style="font-family: Classwiz-X">Q</td>
+        <td style="font-family: Classwiz-X">∫(</td>
+        <td>∫.°-</td>
+      </tr>
+      <tr>
+        <td>43</td>
+        <td style="font-family: Classwiz-X">C</td>
+        <td style="font-family: Classwiz-X">B</td>
+        <td>Alp °°°°</td>
+        <td></td>
+        <td>52</td>
+        <td style="font-family: Classwiz-X">R</td>
+        <td style="font-family: Classwiz-X">d/d𝒙(</td>
+        <td>s ∫.°-</td>
+      </tr>
+      <tr>
+        <td>44</td>
+        <td style="font-family: Classwiz-X">D</td>
+        <td style="font-family: Classwiz-X">C</td>
+        <td>Alp x<sup>-1</sup></td>
+        <td></td>
+        <td>53</td>
+        <td style="font-family: Classwiz-X">S</td>
+        <td style="font-family: Classwiz-X">∏(</td>
+        <td>Alp x</td>
+      </tr>
+      <tr>
+        <td>45</td>
+        <td style="font-family: Classwiz-X">E</td>
+        <td style="font-family: Classwiz-X">D</td>
+        <td>Alp sin</td>
+        <td></td>
+        <td>54</td>
+        <td style="font-family: Classwiz-X">T</td>
+        <td style="font-family: Classwiz-X">@</td>
+        <td>S 7 1 6</td>
+      </tr>
+      <tr>
+        <td>46</td>
+        <td style="font-family: Classwiz-X">F</td>
+        <td style="font-family: Classwiz-X">E</td>
+        <td>Alp cos</td>
+        <td></td>
+        <td>55</td>
+        <td style="font-family: Classwiz-X">U</td>
+        <td style="font-family: Classwiz-X">@</td>
+        <td>S 7 v 2 1</td>
+      </tr>
+      <tr>
+        <td>47</td>
+        <td style="font-family: Classwiz-X">G</td>
+        <td style="font-family: Classwiz-X">F</td>
+        <td>Alp tan</td>
+        <td></td>
+        <td>56</td>
+        <td style="font-family: Classwiz-X">V</td>
+        <td style="font-family: Classwiz-X">@</td>
+        <td>S 7 1 7</td>
+      </tr>
+      <tr>
+        <td>48</td>
+        <td style="font-family: Classwiz-X">H</td>
+        <td style="font-family: Classwiz-X">𝒙</td>
+        <td>x</td>
+        <td></td>
+        <td>57</td>
+        <td style="font-family: Classwiz-X">W</td>
+        <td style="font-family: Classwiz-X">@</td>
+        <td>S 7 v 1 2</td>
+      </tr>
+      <tr>
+        <td>49</td>
+        <td style="font-family: Classwiz-X">I</td>
+        <td style="font-family: Classwiz-X">𝒚</td>
+        <td>Alp )</td>
+        <td></td>
+        <td>58</td>
+        <td style="font-family: Classwiz-X">X</td>
+        <td style="font-family: Classwiz-X">Min</td>
+        <td>S 7 1 8</td>
+      </tr>
+      <tr>
+        <td>4A</td>
+        <td style="font-family: Classwiz-X">J</td>
+        <td style="font-family: Classwiz-X">PreAns</td>
+        <td>Alp Ans</td>
+        <td></td>
+        <td>59</td>
+        <td style="font-family: Classwiz-X">Y</td>
+        <td style="font-family: Classwiz-X">Max(</td>
+        <td>S 7 1 9</td>
+      </tr>
+      <tr>
+        <td>4B</td>
+        <td style="font-family: Classwiz-X">K</td>
+        <td style="font-family: Classwiz-X">𝒛</td>
+        <td>A S=&gt;D</td>
+        <td></td>
+        <td>5A</td>
+        <td style="font-family: Classwiz-X">Z</td>
+        <td style="font-family: Classwiz-X">Mean(</td>
+        <td>S 7 2 6</td>
+      </tr>
+      <tr>
+        <td>4C</td>
+        <td style="font-family: Classwiz-X">L</td>
+        <td style="font-family: Classwiz-X">𝜃</td>
+        <td>S 7 1 3</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4D</td>
+        <td style="font-family: Classwiz-X">M</td>
+        <td style="font-family: Classwiz-X">@</td>
+        <td>S 7 4 7</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4E</td>
+        <td style="font-family: Classwiz-X">N</td>
+        <td style="font-family: Classwiz-X">@</td>
+        <td>S 7 4 8</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>4F</td>
+        <td style="font-family: Classwiz-X">O</td>
+        <td style="font-family: Classwiz-X">@</td>
+        <td>S 7 4 9</td>
+        <td></td>
+      </tr>
+    </table>
+    <h1 style="text-align: center">______________________________</h1>
+    <table
+      class="center"
+      style="text-align: center; font-family: UbuntuMonoBold"
+    >
+      <h3 style="text-align: center; font-family: UbuntuMonoBold">
+        Lowercase Latin alphabet
+      </h3>
+      <thead>
+        <tr>
+          <th>Hex</th>
+          <th>Chars</th>
+          <th>Display</th>
+          <th>Operation</th>
+          <th></th>
+          <th>Hex</th>
+          <th>Chars</th>
+          <th>Display</th>
+          <th>Operation</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>61</td>
+        <td style="font-family: Classwiz-X">a</td>
+        <td style="font-family: Classwiz-X">P(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>70</td>
+        <td style="font-family: Classwiz-X">p</td>
+        <td style="font-family: Classwiz-X">cosh<sup>-1</sup>(</td>
+        <td>OPTN 1 5</td>
+      </tr>
+      <tr>
+        <td>62</td>
+        <td style="font-family: Classwiz-X">b</td>
+        <td style="font-family: Classwiz-X">Q(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>71</td>
+        <td style="font-family: Classwiz-X">q</td>
+        <td style="font-family: Classwiz-X">tanh<sup>-1</sup>(</td>
+        <td>OPTN 1 6</td>
+      </tr>
+      <tr>
+        <td>63</td>
+        <td style="font-family: Classwiz-X">c</td>
+        <td style="font-family: Classwiz-X">R(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>72</td>
+        <td style="font-family: Classwiz-X">r</td>
+        <td style="font-family: Classwiz-X">
+          <i><b>e</b></i
+          >^(
+        </td>
+        <td>S ln</td>
+      </tr>
+      <tr>
+        <td>64</td>
+        <td style="font-family: Classwiz-X">d</td>
+        <td style="font-family: Classwiz-X">Not(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>73</td>
+        <td style="font-family: Classwiz-X">s</td>
+        <td style="font-family: Classwiz-X"><b>10</b>^(</td>
+        <td>S log</td>
+      </tr>
+      <tr>
+        <td>65</td>
+        <td style="font-family: Classwiz-X">e</td>
+        <td style="font-family: Classwiz-X">Neg(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>74</td>
+        <td style="font-family: Classwiz-X">t</td>
+        <td style="font-family: Classwiz-X">√(</td>
+        <td>√</td>
+      </tr>
+      <tr>
+        <td>66</td>
+        <td style="font-family: Classwiz-X">f</td>
+        <td style="font-family: Classwiz-X">Conjg(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>75</td>
+        <td style="font-family: Classwiz-X">u</td>
+        <td style="font-family: Classwiz-X">ln(</td>
+        <td>ln</td>
+      </tr>
+      <tr>
+        <td>67</td>
+        <td style="font-family: Classwiz-X">g</td>
+        <td style="font-family: Classwiz-X">Arg(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>76</td>
+        <td style="font-family: Classwiz-X">v</td>
+        <td style="font-family: Classwiz-X"><sup>3</sup>√(</td>
+        <td>S √</td>
+      </tr>
+      <tr>
+        <td>68</td>
+        <td style="font-family: Classwiz-X">h</td>
+        <td style="font-family: Classwiz-X">Abs(</td>
+        <td>S (</td>
+        <td></td>
+        <td>77</td>
+        <td style="font-family: Classwiz-X">w</td>
+        <td style="font-family: Classwiz-X">sin</td>
+        <td>sin</td>
+      </tr>
+      <tr>
+        <td>69</td>
+        <td style="font-family: Classwiz-X">i</td>
+        <td style="font-family: Classwiz-X">Rnd(</td>
+        <td>S 0</td>
+        <td></td>
+        <td>78</td>
+        <td style="font-family: Classwiz-X">x</td>
+        <td style="font-family: Classwiz-X">cos</td>
+        <td>cos</td>
+      </tr>
+      <tr>
+        <td>6A</td>
+        <td style="font-family: Classwiz-X">j</td>
+        <td style="font-family: Classwiz-X">Det(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>79</td>
+        <td style="font-family: Classwiz-X">y</td>
+        <td style="font-family: Classwiz-X">tan</td>
+        <td>tan</td>
+      </tr>
+      <tr>
+        <td>6B</td>
+        <td style="font-family: Classwiz-X">k</td>
+        <td style="font-family: Classwiz-X">Trn(</td>
+        <td>[Put hex]</td>
+        <td></td>
+        <td>7A</td>
+        <td style="font-family: Classwiz-X">z</td>
+        <td style="font-family: Classwiz-X">sin<sup>-1</sup>(</td>
+        <td>S sin</td>
+      </tr>
+      <tr>
+        <td>6C</td>
+        <td style="font-family: Classwiz-X">l</td>
+        <td style="font-family: Classwiz-X">sinh(</td>
+        <td>OPTN 1 1</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6D</td>
+        <td style="font-family: Classwiz-X">m</td>
+        <td style="font-family: Classwiz-X">cosh(</td>
+        <td>OPTN 1 2</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6E</td>
+        <td style="font-family: Classwiz-X">n</td>
+        <td style="font-family: Classwiz-X">tanh(</td>
+        <td>OPTN 1 3</td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>6F</td>
+        <td style="font-family: Classwiz-X">o</td>
+        <td style="font-family: Classwiz-X">sinh<sup>-1</sup>(</td>
+        <td>OPTN 1 4</td>
+        <td></td>
+      </tr>
+    </table>
+    <h1 style="text-align: center">______________________________</h1>
+    <table
+      style="text-align: center; font-size: 14px; font-family: UbuntuMonoBold"
+    >
+      <h3 style="text-align: center; font-family: UbuntuMonoBold">
+        0x00__ Table<br />
+        Input/1 level chars table<br />
+      </h3>
+      <thead>
+        <tr>
+          <th>0x00__</th>
+          <th>0</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>E</th>
+          <th>F</th>
+        </tr>
+      </thead>
+      <tr class="hlfontcwxRow">
+        <td>0</td>
+        <td></td>
+        <td>　</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>1</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td></td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>2</td>
+        <td>𝒊</td>
+        <td>𝒆</td>
+        <td>𝜋</td>
+        <td>:</td>
+        <td>$</td>
+        <td>?</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>,</td>
+        <td></td>
+        <td>.</td>
+        <td>@</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>3</td>
+        <td>0</td>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+        <td>7</td>
+        <td>8</td>
+        <td>9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>4</td>
+        <td>M</td>
+        <td>Ans</td>
+        <td>A</td>
+        <td>B</td>
+        <td>C</td>
+        <td>D</td>
+        <td>E</td>
+        <td>F</td>
+        <td>𝒙</td>
+        <td>𝒚</td>
+        <td>PreAns</td>
+        <td>[*]</td>
+        <td>𝜃</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>5</td>
+        <td>∑(</td>
+        <td>∫(</td>
+        <td>d/d𝒙(</td>
+        <td>∏(</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>Min(</td>
+        <td>Max(</td>
+        <td>Mean(</td>
+        <td>Sum(</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>6</td>
+        <td>(</td>
+        <td>P(</td>
+        <td>Q(</td>
+        <td>R(</td>
+        <td>Not(</td>
+        <td>Neg(</td>
+        <td>Conjg(</td>
+        <td>Arg(</td>
+        <td>Abs(</td>
+        <td>Rnd(</td>
+        <td>Det(</td>
+        <td>Trn(</td>
+        <td>sinh(</td>
+        <td>cosh(</td>
+        <td>tanh(</td>
+        <td>sinh<sup>-1</sup>(</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>7</td>
+        <td>cosh<sup>-1</sup>(</td>
+        <td>tanh<sup>-1</sup>(</td>
+        <td>𝒆^(</td>
+        <td>^(</td>
+        <td>√(</td>
+        <td>ln(</td>
+        <td><sup>3</sup>√(</td>
+        <td>sin(</td>
+        <td>cos(</td>
+        <td>tan(</td>
+        <td>sin<sup>-1</sup>(</td>
+        <td>cos<sup>-1</sup>(</td>
+        <td>tan<sup>-1</sup>(</td>
+        <td>log(</td>
+        <td>Pol(</td>
+        <td>Rec(</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>8</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>Int(</td>
+        <td>Intg(</td>
+        <td>Ref(</td>
+        <td>Rref(</td>
+        <td>RanInt#(</td>
+        <td>GCD(</td>
+        <td>LCM(</td>
+        <td>RndFix(</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>ReP(</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>9</td>
+        <td>ImP(</td>
+        <td>Identity(</td>
+        <td>UnitV(</td>
+        <td>Angle(</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>A</td>
+        <td>or</td>
+        <td>xor</td>
+        <td>xnor</td>
+        <td>and</td>
+        <td>@</td>
+        <td>=</td>
+        <td>+</td>
+        <td>-</td>
+        <td>×</td>
+        <td>÷</td>
+        <td>÷R</td>
+        <td>•</td>
+        <td>∠</td>
+        <td></td>
+        <td></td>
+        <td>@</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>B</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td></td>
+        <td></td>
+        <td>₁</td>
+        <td>₂</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>C</td>
+        <td>-</td>
+        <td>b</td>
+        <td>o</td>
+        <td>d</td>
+        <td>h</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>⌟</td>
+        <td>^(</td>
+        <td><sup>x</sup>√(</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>D</td>
+        <td>)</td>
+        <td>▶t</td>
+        <td>▶a+b𝒊</td>
+        <td>▶r∠𝜃</td>
+        <td><sup>-1</sup></td>
+        <td><sup>2</sup></td>
+        <td><sup>3</sup></td>
+        <td>%</td>
+        <td>!</td>
+        <td>°</td>
+        <td><sup>r</sup></td>
+        <td><sup>g</sup></td>
+        <td></td>
+        <td>𝐄</td>
+        <td>𝐏</td>
+        <td>𝐓</td>
+      </tr>
+      <tr class="hlfontcwxRow">
+        <td>E</td>
+        <td>𝐆</td>
+        <td>𝐌</td>
+        <td>𝐤</td>
+        <td>𝐦</td>
+        <td>𝝁</td>
+        <td>𝐧</td>
+        <td>𝐩</td>
+        <td>𝐟</td>
+        <td>@</td>
+        <td>▶Simp</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+        <td>@</td>
+      </tr>
+      <tr>
+        <td>F</td>
+      </tr>
+    </table>
+    <p style="text-align: center; font-family: UbuntuBold; font-size: 20px">
+      0xF_ are different from other calculator so i can&prime;t add it to this
+      table<br />
+      Byte 0x4B in other calculator is @ but in fx-580vnx it is variable
+      <span style="font-family: Classwiz-X">𝒛</span>
+      <br />
+      4D:a @ glitch variable<br />
+      4E:and a @ glitch variable<br />
+      4F:and also a @ glitch variable<br />
+      3 of these glitch variables are useful for spelling<br />
+    </p>
+    <h3 style="text-align: center; font-family: UbuntuMonoBold">
+      Output/2 level chars table<br />
+    </h3>
+    <h2 style="font-family: UbuntuBold; text-align: center; font-size: 30px">
+      0x10-&gt;0xEC(UN/(EX, CN, JP, RU, VN)): Basic Latin and math punctuations
+      <table
+        style="
+          text-align: center;
+          font-size: 20px;
+          font-family: UbuntuMonoBold;
+          padding: 20px;
+        "
+      >
+        <tr>
+          <th>0x00__</th>
+          <th>0</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>E</th>
+          <th>F</th>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>0</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>1</td>
+          <td>𝒙</td>
+          <td>𝒚</td>
+          <td>𝒛</td>
+          <td>…</td>
+          <td>▲</td>
+          <td>▼</td>
+          <td>▸</td>
+          <td>₋</td>
+          <td>$</td>
+          <td>◁</td>
+          <td>&</td>
+          <td>𝑡</td>
+          <td>ᴛ</td>
+          <td>ₜ</td>
+          <td>ₕ</td>
+          <td>₅</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>2</td>
+          <td></td>
+          <td>!</td>
+          <td>"</td>
+          <td>#</td>
+          <td>×</td>
+          <td>%</td>
+          <td>÷</td>
+          <td>'</td>
+          <td>(</td>
+          <td>)</td>
+          <td>*</td>
+          <td>+</td>
+          <td>,</td>
+          <td>-</td>
+          <td>.</td>
+          <td>/</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>3</td>
+          <td>0</td>
+          <td>1</td>
+          <td>2</td>
+          <td>3</td>
+          <td>4</td>
+          <td>5</td>
+          <td>6</td>
+          <td>7</td>
+          <td>8</td>
+          <td>9</td>
+          <td>:</td>
+          <td>;</td>
+          <td>&lt;</td>
+          <td>=</td>
+          <td>&gt;</td>
+          <td>?</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>4</td>
+          <td>@</td>
+          <td>A</td>
+          <td>B</td>
+          <td>C</td>
+          <td>D</td>
+          <td>E</td>
+          <td>F</td>
+          <td>G</td>
+          <td>H</td>
+          <td>I</td>
+          <td>J</td>
+          <td>K</td>
+          <td>L</td>
+          <td>M</td>
+          <td>N</td>
+          <td>O</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>5</td>
+          <td>P</td>
+          <td>Q</td>
+          <td>R</td>
+          <td>S</td>
+          <td>T</td>
+          <td>U</td>
+          <td>V</td>
+          <td>W</td>
+          <td>X</td>
+          <td>Y</td>
+          <td>Z</td>
+          <td>[</td>
+          <td></td>
+          <td>]</td>
+          <td>^</td>
+          <td>_</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>6</td>
+          <td>−</td>
+          <td>a</td>
+          <td>b</td>
+          <td>c</td>
+          <td>d</td>
+          <td>e</td>
+          <td>f</td>
+          <td>g</td>
+          <td>h</td>
+          <td>i</td>
+          <td>j</td>
+          <td>k</td>
+          <td>l</td>
+          <td>m</td>
+          <td>n</td>
+          <td>o</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>7</td>
+          <td>p</td>
+          <td>q</td>
+          <td>r</td>
+          <td>s</td>
+          <td>t</td>
+          <td>u</td>
+          <td>v</td>
+          <td>w</td>
+          <td>x</td>
+          <td>y</td>
+          <td>z</td>
+          <td>{</td>
+          <td>|</td>
+          <td>}</td>
+          <td>~</td>
+          <td></td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>8</td>
+          <td>𝒊</td>
+          <td>𝒆</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>°</td>
+          <td>ʳ</td>
+          <td>ᵍ</td>
+          <td>∠</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>→</td>
+          <td>∏</td>
+          <td>⇒</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>9</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>≤</td>
+          <td>≠</td>
+          <td>≥</td>
+          <td>⇩</td>
+          <td>√</td>
+          <td>∫</td>
+          <td>ᴀ</td>
+          <td>ʙ</td>
+          <td>ᴄ</td>
+          <td>ₙ</td>
+          <td>▶</td>
+          <td>◀</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>A</td>
+          <td>⁰</td>
+          <td>¹</td>
+          <td>²</td>
+          <td>³</td>
+          <td>⁴</td>
+          <td>⁵</td>
+          <td>⁶</td>
+          <td>⁷</td>
+          <td>⁸</td>
+          <td>⁹</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>₍</td>
+          <td>₎</td>
+          <td></td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>B</td>
+          <td>₀</td>
+          <td>₁</td>
+          <td>₂</td>
+          <td></td>
+          <td>ꜰ</td>
+          <td>ɴ</td>
+          <td>ᴘ</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>▷</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>C</td>
+          <td>∑</td>
+          <td>𝛼</td>
+          <td>𝛾</td>
+          <td>𝜀</td>
+          <td>𝜃</td>
+          <td>𝜆</td>
+          <td>𝜇</td>
+          <td>𝜋</td>
+          <td>𝜎</td>
+          <td>𝜙</td>
+          <td>ℓ</td>
+          <td>ℏ</td>
+          <td></td>
+          <td></td>
+          <td>₃</td>
+          <td></td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>D</td>
+          <td>𝐟</td>
+          <td>𝐩</td>
+          <td>𝐧</td>
+          <td>𝝁</td>
+          <td>𝐦</td>
+          <td>𝐤</td>
+          <td>𝐌</td>
+          <td>𝐆</td>
+          <td>𝐓</td>
+          <td>𝐏</td>
+          <td>𝐄</td>
+          <td>𝐹</td>
+          <td>ₚ</td>
+          <td>ₑ</td>
+          <td>ᴊ</td>
+          <td>ᴋ</td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>E</td>
+          <td></td>
+          <td>ᵤ</td>
+          <td>₉</td>
+          <td>Å</td>
+          <td>ₘ</td>
+          <td>ɪ</td>
+          <td>₄</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td>↺</td>
+          <td></td>
+          <td>ⁿ</td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>F</td>
+        </tr>
+      </table>
+      <br />
+      0xF010-&gt;0xF031(UN/(EX, CN, JP, RU, VN): Japanese conversion units<br />
+      <table
+        style="
+          text-align: center;
+          font-size: 20px;
+          font-family: UbuntuMonoBold;
+          padding: 20px;
+        "
+     >
+        <tr>
+          <th>0x00__</th>
+          <th>0</th>
+          <th>1</th>
+          <th>2</th>
+          <th>3</th>
+          <th>4</th>
+          <th>5</th>
+          <th>6</th>
+          <th>7</th>
+          <th>8</th>
+          <th>9</th>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>E</th>
+          <th>F</th>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>0</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>1</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr class="hlfontcwxRow">
+          <td>2</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr><tr class="hlfontcwxRow">
+          <td>3</td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+      <br />
+      0xF110-&gt;0xF1EE(CN/CN): Chinese characters
+      
+      <br />
+      0xF110-&gt;0xF1EE(JA/JP): Japanese characters
+      
+      <br />
+      0xF210-&gt;0xF25B(JA/JP): Japanese additional characters
+      
+      <br />
+      0xF310-&gt;0xF3D6(SR/RU): Serbian Cyrillic alphabet
+      
+      <br />
+      0xF410-&gt;0xF495(VN/VN): Vietnamese vowel with accent marks
+      
+      <br />
+    </h2>
+    <p style="text-align: center; font-family: UbuntuBold;font-size:200%">
+      All table below are missed some characters byte because these character
+      are glitched,it will be unlisted
+    </p>
+    <table
+      style="
+        text-align: center;
+        font-size: 20px;
+        font-family: UbuntuMonoBold;
+        padding: 20px;
+      "
+    >
+      <h3 style="text-align: center; font-family: UbuntuMonoBold;font-size:200%">
+        0xFA__ Table
+      </h3>
+      <tr>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <td></td>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA01</td>
+        <td>ch▶yd</td>
+        <td></td>
+        <td>FA10</td>
+        <td>acre▶mile<sup>2</sup></td>
+        <td></td>
+        <td>FA20</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA30</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA02</td>
+        <td>yd▶ch</td>
+        <td></td>
+        <td>FA11</td>
+        <td>bu▶gal(UK)</td>
+        <td></td>
+        <td>FA21</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA31</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA03</td>
+        <td>ch▶mile</td>
+        <td></td>
+        <td>FA12</td>
+        <td>gal(UK)▶bu</td>
+        <td></td>
+        <td>FA22</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA32</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA04</td>
+        <td>mile▶ch</td>
+        <td></td>
+        <td>FA13</td>
+        <td>lb▶oz</td>
+        <td></td>
+        <td>FA23</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA33</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA05</td>
+        <td>mil▶in</td>
+        <td></td>
+        <td>FA14</td>
+        <td>oz▶lb</td>
+        <td></td>
+        <td>FA24</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA34</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA06</td>
+        <td>in▶mil</td>
+        <td></td>
+        <td>FA15</td>
+        <td>ton(long)▶oz</td>
+        <td></td>
+        <td>FA25</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA35</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA07</td>
+        <td>fath▶in</td>
+        <td></td>
+        <td>FA16</td>
+        <td>oz▶ton(long)</td>
+        <td></td>
+        <td>FA26</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA36</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA08</td>
+        <td>in▶fath</td>
+        <td></td>
+        <td>FA17</td>
+        <td>ton(long)▶lb</td>
+        <td></td>
+        <td>FA27</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA37</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA09</td>
+        <td>fath▶ft</td>
+        <td></td>
+        <td>FA18</td>
+        <td>lb▶ton(long)</td>
+        <td></td>
+        <td>FA28</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA38</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0A</td>
+        <td>ft▶fath</td>
+        <td></td>
+        <td>FA19</td>
+        <td>ton(short)▶oz</td>
+        <td></td>
+        <td>FA29</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA39</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0B</td>
+        <td>fath▶yd</td>
+        <td></td>
+        <td>FA1A</td>
+        <td>oz▶ton(short)</td>
+        <td></td>
+        <td>FA2A</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA3A</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0C</td>
+        <td>yd▶fath</td>
+        <td></td>
+        <td>FA1B</td>
+        <td>ton(short)▶lb</td>
+        <td></td>
+        <td>FA2B</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA3B</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0D</td>
+        <td>ha▶a</td>
+        <td></td>
+        <td>FA1C</td>
+        <td>lb▶ton(short)</td>
+        <td></td>
+        <td>FA2C</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA3C</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0E</td>
+        <td>a▶ha</td>
+        <td></td>
+        <td>FA1D</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA2D</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA3D</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td>FA0F</td>
+        <td>mile²▶acre</td>
+        <td></td>
+        <td>FA1E</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA2E</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA3E</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td style="font-family:Classwiz-X"></td>
+        <td></td>
+        <td></td>
+        <td>FA1F</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA2F</td>
+        <td>▸</td>
+        <td></td>
+        <td>FA3F</td>
+        <td>▸</td>
+      </tr>
+      <tr class="hlfontcwxtableFA">
+        <td style="font-family:Classwiz-X"></td>
+        <td></td>
+        <td></td>
+        <td style="font-family:Classwiz-X"></td>
+        <td></td>
+        <td></td>
+        <td style="font-family:Classwiz-X"></td>
+        <td></td>
+        <td></td>
+        <td>FA40</td>
+        <td>▸</td>
+      </tr>
+    </table>
+    <h3 style="text-align: center; font-family: UbuntuMonoBold;font-size:200%">
+      0xFB__ Table
+    </h3>
+    <table
+      class="center"
+      style="
+        text-align: center;
+        font-size: 20px;
+        font-family: UbuntuMonoBold;
+        padding: 20px;
+      "
+    >
+      <tr>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <td></td>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB01</td>
+        <td>&lt;</td>
+        <td></td>
+        <td>FB10</td>
+        <td>→M</td>
+        <td></td>
+        <td>FB20</td>
+        <td>MatA</td>
+        <td></td>
+        <td>FB30</td>
+        <td>⁰</td>
+        <td></td>
+        <td>FB40</td>
+        <td>;</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB02</td>
+        <td>&gt;</td>
+        <td></td>
+        <td>FB11</td>
+        <td>@</td>
+        <td></td>
+        <td>FB21</td>
+        <td>MatB</td>
+        <td></td>
+        <td>FB31</td>
+        <td>¹</td>
+        <td></td>
+        <td>FB41</td>
+        <td>R</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB03</td>
+        <td>≠</td>
+        <td></td>
+        <td>FB12</td>
+        <td>→A</td>
+        <td></td>
+        <td>FB22</td>
+        <td>MatC</td>
+        <td></td>
+        <td>FB32</td>
+        <td>²</td>
+        <td></td>
+        <td>FB42</td>
+        <td>𝜃</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB04</td>
+        <td>≤</td>
+        <td></td>
+        <td>FB13</td>
+        <td>→B</td>
+        <td></td>
+        <td>FB23</td>
+        <td>MatD</td>
+        <td></td>
+        <td>FB33</td>
+        <td>³</td>
+        <td></td>
+        <td>FB43</td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB05</td>
+        <td>≥</td>
+        <td></td>
+        <td>FB14</td>
+        <td>→C</td>
+        <td></td>
+        <td>FB24</td>
+        <td>MatAns</td>
+        <td></td>
+        <td>FB34</td>
+        <td>⁴</td>
+        <td></td>
+        <td>FB44</td>
+        <td>x</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB06</td>
+        <td>@</td>
+        <td></td>
+        <td>FB15</td>
+        <td>→D</td>
+        <td></td>
+        <td>FB25</td>
+        <td>VctA</td>
+        <td></td>
+        <td>FB35</td>
+        <td>⁵</td>
+        <td></td>
+        <td>FB45</td>
+        <td>¹</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB07</td>
+        <td>@</td>
+        <td></td>
+        <td>FB16</td>
+        <td>→E</td>
+        <td></td>
+        <td>FB26</td>
+        <td>VctB</td>
+        <td></td>
+        <td>FB36</td>
+        <td>⁶</td>
+        <td></td>
+        <td>FB46</td>
+        <td>²</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB08</td>
+        <td>@</td>
+        <td></td>
+        <td>FB17</td>
+        <td>→F</td>
+        <td></td>
+        <td>FB27</td>
+        <td>VctC</td>
+        <td></td>
+        <td>FB37</td>
+        <td>⁷</td>
+        <td></td>
+        <td>FB47</td>
+        <td>³</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB09</td>
+        <td>@</td>
+        <td></td>
+        <td>FB18</td>
+        <td>→𝒙</td>
+        <td></td>
+        <td>FB28</td>
+        <td>VctD</td>
+        <td></td>
+        <td>FB38</td>
+        <td>⁸</td>
+        <td></td>
+        <td>FB48</td>
+        <td>⁴</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0A</td>
+        <td>@</td>
+        <td></td>
+        <td>FB19</td>
+        <td>→𝒚</td>
+        <td></td>
+        <td>FB29</td>
+        <td>VctAns</td>
+        <td></td>
+        <td>FB39</td>
+        <td>⁹</td>
+        <td></td>
+        <td>FB49</td>
+        <td>⁵</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0B</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1A</td>
+        <td>M+</td>
+        <td></td>
+        <td>FB2A</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3A</td>
+        <td></td>
+        <td></td>
+        <td>FB4A</td>
+        <td>⁶</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0C</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1B</td>
+        <td>M-</td>
+        <td></td>
+        <td>FB2B</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3B</td>
+        <td></td>
+        <td></td>
+        <td>FB4B</td>
+        <td>⁷</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0D</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1C</td>
+        <td>→𝒛</td>
+        <td></td>
+        <td>FB2C</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3C</td>
+        <td></td>
+        <td></td>
+        <td>FB4C</td>
+        <td>⁸</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0E</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1D</td>
+        <td>@</td>
+        <td></td>
+        <td>FB2D</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3D</td>
+        <td>'</td>
+        <td></td>
+        <td>FB4D</td>
+        <td>⁹</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td>FB0F</td>
+        <td>@</td>
+        <td></td>
+        <td>FB1E</td>
+        <td>@</td>
+        <td></td>
+        <td>FB2E</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3E</td>
+        <td>"</td>
+        <td></td>
+        <td>FB4E</td>
+        <td>Q</td>
+      </tr>
+      <tr class="hlfontcwxtableFB">
+        <td style="font-family:Classwiz-X"></td>
+        <td></td>
+        <td></td>
+        <td>FB1F</td>
+        <td>@</td>
+        <td></td>
+        <td>FB2F</td>
+        <td>@</td>
+        <td></td>
+        <td>FB3F</td>
+        <td>⇩</td>
+        <td></td>
+        <td>FB4F</td>
+        <td>@</td>
+      </tr>
+    </table>
+    <h3 style="text-align: center; font-family: UbuntuMonoBold;font-size:200%">
+      0xFD__ Table
+    </h3>
+    <table
+      class="center"
+      style="
+        text-align: center;
+        font-size: 20px;
+        font-family: UbuntuMonoBold;
+        padding: 20px;
+      "
+    >
+      <tr>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <td></td>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD01</td>
+        <td>∑x²</td>
+        <td></td>
+        <td>FD10</td>
+        <td>a</td>
+        <td></td>
+        <td>FD20</td>
+        <td>an</td>
+        <td></td>
+        <td>FD30</td>
+        <td>mₚ</td>
+        <td></td>
+        <td>FD40</td>
+        <td>u</td>
+        <td></td>
+        <td>FD50</td>
+        <td>𝜇₀</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD02</td>
+        <td>∑x</td>
+        <td></td>
+        <td>FD11</td>
+        <td>b</td>
+        <td></td>
+        <td>FD21</td>
+        <td>n</td>
+        <td></td>
+        <td>FD31</td>
+        <td>mₙ</td>
+        <td></td>
+        <td>FD41</td>
+        <td>𝜇ₚ</td>
+        <td></td>
+        <td>FD51</td>
+        <td>𝜙₀</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD03</td>
+        <td>n</td>
+        <td></td>
+        <td>FD12</td>
+        <td>c</td>
+        <td></td>
+        <td>FD22</td>
+        <td>@</td>
+        <td></td>
+        <td>FD32</td>
+        <td>mₑ</td>
+        <td></td>
+        <td>FD42</td>
+        <td>𝜇ₑ</td>
+        <td></td>
+        <td>FD52</td>
+        <td>g</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD04</td>
+        <td>∑y²</td>
+        <td></td>
+        <td>FD13</td>
+        <td>r</td>
+        <td></td>
+        <td>FD23</td>
+        <td>@</td>
+        <td></td>
+        <td>FD33</td>
+        <td>m</td>
+        <td></td>
+        <td>FD43</td>
+        <td>𝜇ₙ</td>
+        <td></td>
+        <td>FD53</td>
+        <td>G₀</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD05</td>
+        <td>∑y</td>
+        <td></td>
+        <td>FD14</td>
+        <td>𝜎x</td>
+        <td></td>
+        <td>FD24</td>
+        <td>@</td>
+        <td></td>
+        <td>FD34</td>
+        <td>a₀</td>
+        <td></td>
+        <td>FD44</td>
+        <td>𝜇</td>
+        <td></td>
+        <td>FD54</td>
+        <td>Z₀</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD06</td>
+        <td>∑xy</td>
+        <td></td>
+        <td>FD15</td>
+        <td>sx</td>
+        <td></td>
+        <td>FD25</td>
+        <td>@</td>
+        <td></td>
+        <td>FD35</td>
+        <td>h</td>
+        <td></td>
+        <td>FD45</td>
+        <td>𝐹</td>
+        <td></td>
+        <td>FD55</td>
+        <td>t</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD07</td>
+        <td>∑x³</td>
+        <td></td>
+        <td>FD16</td>
+        <td>𝜎y</td>
+        <td></td>
+        <td>FD26</td>
+        <td>@</td>
+        <td></td>
+        <td>FD36</td>
+        <td>𝜇ɴ</td>
+        <td></td>
+        <td>FD46</td>
+        <td>e</td>
+        <td></td>
+        <td>FD56</td>
+        <td>G</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD08</td>
+        <td>∑x²y</td>
+        <td></td>
+        <td>FD17</td>
+        <td>sy</td>
+        <td></td>
+        <td>FD27</td>
+        <td>@</td>
+        <td></td>
+        <td>FD37</td>
+        <td>𝜇ʙ</td>
+        <td></td>
+        <td>FD47</td>
+        <td>Nᴀ</td>
+        <td></td>
+        <td>FD57</td>
+        <td>atm</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD09</td>
+        <td>∑x⁴</td>
+        <td></td>
+        <td>FD18</td>
+        <td>Ran#</td>
+        <td></td>
+        <td>FD28</td>
+        <td>@</td>
+        <td></td>
+        <td>FD38</td>
+        <td>ℏ</td>
+        <td></td>
+        <td>FD48</td>
+        <td>k</td>
+        <td></td>
+        <td>FD58</td>
+        <td>lᴘ</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD0A</td>
+        <td>min(x)</td>
+        <td></td>
+        <td>FD19</td>
+        <td>Q₁</td>
+        <td></td>
+        <td>FD29</td>
+        <td>@</td>
+        <td></td>
+        <td>FD39</td>
+        <td>𝛼</td>
+        <td></td>
+        <td>FD49</td>
+        <td>Vₘ</td>
+        <td></td>
+        <td>FD59</td>
+        <td>tᴘ</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD0B</td>
+        <td>max(x)</td>
+        <td></td>
+        <td>FD1A</td>
+        <td>Q₃</td>
+        <td></td>
+        <td>FD2A</td>
+        <td>@</td>
+        <td></td>
+        <td>FD3A</td>
+        <td>rₑ</td>
+        <td></td>
+        <td>FD4A</td>
+        <td>R</td>
+        <td></td>
+        <td>FD5A</td>
+        <td>Kᴊ</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD0C</td>
+        <td>min(y)</td>
+        <td></td>
+        <td>FD1B</td>
+        <td>Med</td>
+        <td></td>
+        <td>FD2B</td>
+        <td>@</td>
+        <td></td>
+        <td>FD3B</td>
+        <td>𝜆ᴄ</td>
+        <td></td>
+        <td>FD4B</td>
+        <td>c₀</td>
+        <td></td>
+        <td>FD5B</td>
+        <td>Rᴋ</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD0D</td>
+        <td>max(y)</td>
+        <td></td>
+        <td>FD1C</td>
+        <td>𝜎²x</td>
+        <td></td>
+        <td>FD2C</td>
+        <td>@</td>
+        <td></td>
+        <td>FD3C</td>
+        <td>𝛾ₚ</td>
+        <td></td>
+        <td>FD4C</td>
+        <td>c₁</td>
+        <td></td>
+        <td>FD5C</td>
+        <td>m</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD0E</td>
+        <td></td>
+        <td></td>
+        <td>FD1D</td>
+        <td>s²x</td>
+        <td></td>
+        <td>FD2D</td>
+        <td>@</td>
+        <td></td>
+        <td>FD3D</td>
+        <td>𝜆ᴄₚ</td>
+        <td></td>
+        <td>FD4D</td>
+        <td>c₂</td>
+        <td></td>
+        <td>FD5D</td>
+        <td>Rᴋ₋₉₀</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td>FD0F</td>
+        <td></td>
+        <td></td>
+        <td>FD1E</td>
+        <td>𝜎²y</td>
+        <td></td>
+        <td>FD2E</td>
+        <td>@</td>
+        <td></td>
+        <td>FD3E</td>
+        <td>𝜆ᴄₙ</td>
+        <td></td>
+        <td>FD4E</td>
+        <td>𝜎</td>
+        <td></td>
+        <td>FD5E</td>
+        <td>Kᴊ₋₉₀</td>
+      </tr>
+      <tr class="hlfontcwxtableFD">
+        <td style="font-family:Classwiz-X"></td>
+        <td></td>
+        <td></td>
+        <td>FD1F</td>
+        <td>s²y</td>
+        <td></td>
+        <td>FD2F</td>
+        <td>AtWt</td>
+        <td></td>
+        <td>FD3F</td>
+        <td>R</td>
+        <td></td>
+        <td>FD4F</td>
+        <td>𝜀₀</td>
+        <td></td>
+        <td>FD5F</td>
+        <td>@</td>
+      </tr>
+    </table>
+    <h3 style="text-align: center; font-family: UbuntuMonoBold;font-size:200%">
+      0xFE__ Table
+    </h3>
+    <table
+      class="center"
+      style="
+        text-align: center;
+        font-size: 20px;
+        font-family: UbuntuMonoBold;
+        padding: 20px;
+      "
+    >
+      <tr>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <td></td>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+        <th></th>
+        <th>Hex</th>
+        <th>Display</th>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE01</td>
+        <td>in▸cm</td>
+        <td></td>
+        <td>FE10</td>
+        <td>L▸gal(UK)</td>
+        <td></td>
+        <td>FE20</td>
+        <td>Pa▸kgf/cm²</td>
+        <td></td>
+        <td>FE30</td>
+        <td>m▸ua</td>
+        <td></td>
+        <td>FE40</td>
+        <td>cm²▸in²</td>
+        <td></td>
+        <td>FE50</td>
+        <td>m³▸ft³</td>
+        <td></td>
+        <td>FE60</td>
+        <td>s▸min</td>
+        <td></td>
+        <td>FE70</td>
+        <td>N▸lbf</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE02</td>
+        <td>cm▸in</td>
+        <td></td>
+        <td>FE11</td>
+        <td>pc▸km</td>
+        <td></td>
+        <td>FE21</td>
+        <td>kgf*m▸J</td>
+        <td></td>
+        <td>FE31</td>
+        <td>l.y.▸m</td>
+        <td></td>
+        <td>FE41</td>
+        <td>mile²▸km²</td>
+        <td></td>
+        <td>FE51</td>
+        <td>in³▸m³</td>
+        <td></td>
+        <td>FE61</td>
+        <td>h▸s</td>
+        <td></td>
+        <td>FE71</td>
+        <td>kgf▸N</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE03</td>
+        <td>ft▸m</td>
+        <td></td>
+        <td>FE12</td>
+        <td>km▸pc</td>
+        <td></td>
+        <td>FE22</td>
+        <td>J▸kgf*m</td>
+        <td></td>
+        <td>FE32</td>
+        <td>m▸l.y.</td>
+        <td></td>
+        <td>FE42</td>
+        <td>km²▸mile²</td>
+        <td></td>
+        <td>FE52</td>
+        <td>m³▸in³</td>
+        <td></td>
+        <td>FE62</td>
+        <td>s▸h</td>
+        <td></td>
+        <td>FE72</td>
+        <td>N▸kgf</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE04</td>
+        <td>m▸ft</td>
+        <td></td>
+        <td>FE13</td>
+        <td>m/s▸km/h</td>
+        <td></td>
+        <td>FE23</td>
+        <td>lbf/in²▸kPa</td>
+        <td></td>
+        <td>FE33</td>
+        <td>mil▸m</td>
+        <td></td>
+        <td>FE43</td>
+        <td>L▸m³</td>
+        <td></td>
+        <td>FE53</td>
+        <td>mton▸kg</td>
+        <td></td>
+        <td>FE63</td>
+        <td>day▸s</td>
+        <td></td>
+        <td>FE73</td>
+        <td>bar▸Pa</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE05</td>
+        <td>yd▸m</td>
+        <td></td>
+        <td>FE14</td>
+        <td>km/h▸m/s</td>
+        <td></td>
+        <td>FE24</td>
+        <td>kPa▸lbf/in²</td>
+        <td></td>
+        <td>FE34</td>
+        <td>m▸mil</td>
+        <td></td>
+        <td>FE44</td>
+        <td>m³▸L</td>
+        <td></td>
+        <td>FE54</td>
+        <td>kg▸mton</td>
+        <td></td>
+        <td>FE64</td>
+        <td>s▸day</td>
+        <td></td>
+        <td>FE74</td>
+        <td>Pa▸bar</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE06</td>
+        <td>m▸yd</td>
+        <td></td>
+        <td>FE15</td>
+        <td>oz▸g</td>
+        <td></td>
+        <td>FE25</td>
+        <td>°C▸°F</td>
+        <td></td>
+        <td>FE35</td>
+        <td>fath▸m</td>
+        <td></td>
+        <td>FE45</td>
+        <td>bu▸L</td>
+        <td></td>
+        <td>FE55</td>
+        <td>ton(long)▸kg</td>
+        <td></td>
+        <td>FE65</td>
+        <td>mile/h▸m/s</td>
+        <td></td>
+        <td>FE75</td>
+        <td>dyn/cm²▸Pa</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE07</td>
+        <td>mile▸km</td>
+        <td></td>
+        <td>FE16</td>
+        <td>g▸oz</td>
+        <td></td>
+        <td>FE26</td>
+        <td>°F▸°C</td>
+        <td></td>
+        <td>FE36</td>
+        <td>m▸fath</td>
+        <td></td>
+        <td>FE46</td>
+        <td>L▸bu</td>
+        <td></td>
+        <td>FE56</td>
+        <td>kg▸ton(long)</td>
+        <td></td>
+        <td>FE66</td>
+        <td>m/s▸mile/h</td>
+        <td></td>
+        <td>FE76</td>
+        <td>Pa▸dyn/cm²</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE08</td>
+        <td>km▸mile</td>
+        <td></td>
+        <td>FE17</td>
+        <td>lb▸kg</td>
+        <td></td>
+        <td>FE27</td>
+        <td>cal▸J</td>
+        <td></td>
+        <td>FE37</td>
+        <td>b▸m²</td>
+        <td></td>
+        <td>FE47</td>
+        <td>bbl▸L</td>
+        <td></td>
+        <td>FE57</td>
+        <td>ton(short)▸kg</td>
+        <td></td>
+        <td>FE67</td>
+        <td>knot▸m/s</td>
+        <td></td>
+        <td>FE77</td>
+        <td>lbf/in²▸Pa</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE09</td>
+        <td>n mile▸m</td>
+        <td></td>
+        <td>FE18</td>
+        <td>kg▸lb</td>
+        <td></td>
+        <td>FE28</td>
+        <td>J▸cal</td>
+        <td></td>
+        <td>FE38</td>
+        <td>m²▸b</td>
+        <td></td>
+        <td>FE48</td>
+        <td>L▸bbl</td>
+        <td></td>
+        <td>FE58</td>
+        <td>kg▸ton(short)</td>
+        <td></td>
+        <td>FE68</td>
+        <td>m/s▸knot</td>
+        <td></td>
+        <td>FE78</td>
+        <td>Pa▸lbf/in²</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE0A</td>
+        <td>m▸n mile</td>
+        <td></td>
+        <td>FE19</td>
+        <td>atm▸Pa</td>
+        <td></td>
+        <td>FE29</td>
+        <td>Å▸m</td>
+        <td></td>
+        <td>FE39</td>
+        <td>a▸m²</td>
+        <td></td>
+        <td>FE49</td>
+        <td>ton▸m³</td>
+        <td></td>
+        <td>FE59</td>
+        <td>mcarat▸g</td>
+        <td></td>
+        <td>FE69</td>
+        <td>Gal▸m/s²</td>
+        <td></td>
+        <td>FE79</td>
+        <td>mmH₂O▸Pa</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE0B</td>
+        <td>acre▸m²</td>
+        <td></td>
+        <td>FE1A</td>
+        <td>Pa▸atm</td>
+        <td></td>
+        <td>FE2A</td>
+        <td>m▸Å</td>
+        <td></td>
+        <td>FE3A</td>
+        <td>m²▸a</td>
+        <td></td>
+        <td>FE4A</td>
+        <td>m³▸ton</td>
+        <td></td>
+        <td>FE5A</td>
+        <td>g▸mcarat</td>
+        <td></td>
+        <td>FE6A</td>
+        <td>m/s²▸Gal</td>
+        <td></td>
+        <td>FE7A</td>
+        <td>Pa▸mmH₂O</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE0C</td>
+        <td>m²▸acre</td>
+        <td></td>
+        <td>FE1B</td>
+        <td>mmHg▸Pa</td>
+        <td></td>
+        <td>FE2B</td>
+        <td>fm▸m</td>
+        <td></td>
+        <td>FE3B</td>
+        <td>ha▸m²</td>
+        <td></td>
+        <td>FE4B</td>
+        <td>fl oz(US)▸mL</td>
+        <td></td>
+        <td>FE5B</td>
+        <td>r▸rad</td>
+        <td></td>
+        <td>FE6B</td>
+        <td>N*m▸dyn*cm</td>
+        <td></td>
+        <td>FE7B</td>
+        <td>inHg▸Pa</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE0D</td>
+        <td>gal(US)▸L</td>
+        <td></td>
+        <td>FE1C</td>
+        <td>Pa▸mmHg</td>
+        <td></td>
+        <td>FE2C</td>
+        <td>m▸fm</td>
+        <td></td>
+        <td>FE3C</td>
+        <td>m²▸ha</td>
+        <td></td>
+        <td>FE4C</td>
+        <td>mL▸fl oz(US)</td>
+        <td></td>
+        <td>FE5C</td>
+        <td>rad▸r</td>
+        <td></td>
+        <td>FE6C</td>
+        <td>dyn*cm▸N*m</td>
+        <td></td>
+        <td>FE7C</td>
+        <td>Pa▸inHg</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE0E</td>
+        <td>L▸gal(US)</td>
+        <td></td>
+        <td>FE1D</td>
+        <td>hp▸kW</td>
+        <td></td>
+        <td>FE2D</td>
+        <td>ch▸m</td>
+        <td></td>
+        <td>FE3D</td>
+        <td>ft²▸m²</td>
+        <td></td>
+        <td>FE4D</td>
+        <td>fl oz(UK)▸mL</td>
+        <td></td>
+        <td>FE5D</td>
+        <td>t−yr▸s</td>
+        <td></td>
+        <td>FE6D</td>
+        <td>dyn▸N</td>
+        <td></td>
+        <td>FE7D</td>
+        <td>erg▸J</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE0F</td>
+        <td>gal(UK)▸L</td>
+        <td></td>
+        <td>FE1E</td>
+        <td>kW▸hp</td>
+        <td></td>
+        <td>FE2E</td>
+        <td>m▸ch</td>
+        <td></td>
+        <td>FE3E</td>
+        <td>m²▸ft²</td>
+        <td></td>
+        <td>FE4E</td>
+        <td>mL▸fl oz(UK)</td>
+        <td></td>
+        <td>FE5E</td>
+        <td>s▸t−yr</td>
+        <td></td>
+        <td>FE6E</td>
+        <td>N▸dyn</td>
+        <td></td>
+        <td>FE7E</td>
+        <td>J▸erg</td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td style="font-family: Classwiz-X"></td>
+        <td></td>
+        <td></td>
+        <td>FE1F</td>
+        <td>kgf/cm²▸Pa</td>
+        <td></td>
+        <td>FE2F</td>
+        <td>ua▸m</td>
+        <td></td>
+        <td>FE3F</td>
+        <td>in²▸cm²</td>
+        <td></td>
+        <td>FE4F</td>
+        <td>ft³▸m³</td>
+        <td></td>
+        <td>FE5F</td>
+        <td>min▸s</td>
+        <td></td>
+        <td>FE6F</td>
+        <td>lbf▸N</td>
+        <td></td>
+        <td>FE7F</td>
+        <td>eV▸J</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE80</td>
+        <td>J▸eV</td>
+        <td></td>
+        <td>FE90</td>
+        <td>m²/s▸St</td>
+        <td></td>
+        <td>FEA0</td>
+        <td>Gy▸rad</td>
+        <td></td>
+        <td>FEB0</td>
+        <td>km▸</td>
+        <td></td>
+        <td>FEC0</td>
+        <td>L▸</td>
+        <td></td>
+        <td>FED0</td>
+        <td>m²▸</td>
+        <td></td>
+        <td>FEE0</td>
+        <td>in▸ft</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE81</td>
+        <td>J▸eV</td>
+        <td></td>
+        <td>FE91</td>
+        <td>G▸T</td>
+        <td></td>
+        <td>FEA1</td>
+        <td>rem▸Sv</td>
+        <td></td>
+        <td>FEB1</td>
+        <td>▸km</td>
+        <td></td>
+        <td>FEC1</td>
+        <td>▸L</td>
+        <td></td>
+        <td>FED1</td>
+        <td>▸m²</td>
+        <td></td>
+        <td>FEE1</td>
+        <td>yd▸in</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE82</td>
+        <td>J▸Btu</td>
+        <td></td>
+        <td>FE92</td>
+        <td>T▸G</td>
+        <td></td>
+        <td>FEA2</td>
+        <td>Sv▸rem</td>
+        <td></td>
+        <td>FEB2</td>
+        <td>km▸</td>
+        <td></td>
+        <td>FEC2</td>
+        <td>L▸</td>
+        <td></td>
+        <td>FED2</td>
+        <td></td>
+        <td></td>
+        <td>FEE2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE83</td>
+        <td>calɪᴛ▸J</td>
+        <td></td>
+        <td>FE93</td>
+        <td>Oe▸A/m</td>
+        <td></td>
+        <td>FEA3</td>
+        <td>R▸C/kg</td>
+        <td></td>
+        <td>FEB3</td>
+        <td>▸m²</td>
+        <td></td>
+        <td>FEC3</td>
+        <td>▸kg</td>
+        <td></td>
+        <td>FED3</td>
+        <td></td>
+        <td></td>
+        <td>FEE3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE84</td>
+        <td>J▸calɪᴛ</td>
+        <td></td>
+        <td>FE94</td>
+        <td>A/m▸Oe</td>
+        <td></td>
+        <td>FEA4</td>
+        <td>C/kg▸R</td>
+        <td></td>
+        <td>FEB4</td>
+        <td>m²▸</td>
+        <td></td>
+        <td>FEC4</td>
+        <td>kg▸</td>
+        <td></td>
+        <td>FED4</td>
+        <td></td>
+        <td></td>
+        <td>FEE4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE85</td>
+        <td>calₜₕ▸J</td>
+        <td></td>
+        <td>FE95</td>
+        <td>Mx▸Wb</td>
+        <td></td>
+        <td>FEA5</td>
+        <td>▸m</td>
+        <td></td>
+        <td>FEB5</td>
+        <td>▸m²</td>
+        <td></td>
+        <td>FEC5</td>
+        <td>▸g</td>
+        <td></td>
+        <td>FED5</td>
+        <td></td>
+        <td></td>
+        <td>FEE5</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE86</td>
+        <td>calₜₕ▸J</td>
+        <td></td>
+        <td>FE96</td>
+        <td>Wb▸Mx</td>
+        <td></td>
+        <td>FEA6</td>
+        <td>m▸</td>
+        <td></td>
+        <td>FEB6</td>
+        <td>▸m²</td>
+        <td></td>
+        <td>FEC6</td>
+        <td>g▸</td>
+        <td></td>
+        <td>FEC6</td>
+        <td></td>
+        <td></td>
+        <td>FEE6</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE87</td>
+        <td>kW*h▸J</td>
+        <td></td>
+        <td>FE97</td>
+        <td>𝛾▸T</td>
+        <td></td>
+        <td>FEA7</td>
+        <td>▸cm</td>
+        <td></td>
+        <td>FEB7</td>
+        <td>▸m²</td>
+        <td></td>
+        <td>FEC7</td>
+        <td>▸g</td>
+        <td></td>
+        <td>FEC7</td>
+        <td></td>
+        <td></td>
+        <td>FEE7</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE88</td>
+        <td>J▸kW*h</td>
+        <td></td>
+        <td>FE98</td>
+        <td>T▸𝛾</td>
+        <td></td>
+        <td>FEA8</td>
+        <td>cm▸</td>
+        <td></td>
+        <td>FEB8</td>
+        <td>m²▸</td>
+        <td></td>
+        <td>FEC8</td>
+        <td></td>
+        <td></td>
+        <td>FED8</td>
+        <td></td>
+        <td></td>
+        <td>FEE8</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE89</td>
+        <td>Btu/min▸W</td>
+        <td></td>
+        <td>FE99</td>
+        <td>sb▸cd/m²</td>
+        <td></td>
+        <td>FEA9</td>
+        <td>▸mm</td>
+        <td></td>
+        <td>FEB9</td>
+        <td>▸m²</td>
+        <td></td>
+        <td>FEC9</td>
+        <td></td>
+        <td></td>
+        <td>FED9</td>
+        <td></td>
+        <td></td>
+        <td>FEE9</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8A</td>
+        <td>W▸Btu/min</td>
+        <td></td>
+        <td>FE9A</td>
+        <td>cd/m²▸sb</td>
+        <td></td>
+        <td>FEAA</td>
+        <td>mm▸</td>
+        <td></td>
+        <td>FEBA</td>
+        <td>m²▸</td>
+        <td></td>
+        <td>FECA</td>
+        <td></td>
+        <td></td>
+        <td>FEDA</td>
+        <td></td>
+        <td></td>
+        <td>FEEA</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8B</td>
+        <td>▸J</td>
+        <td></td>
+        <td>FE9B</td>
+        <td>ph▸lx</td>
+        <td></td>
+        <td>FEAB</td>
+        <td>▸m</td>
+        <td></td>
+        <td>FEBB</td>
+        <td>▸L</td>
+        <td></td>
+        <td>FECB</td>
+        <td></td>
+        <td></td>
+        <td>FEDB</td>
+        <td></td>
+        <td></td>
+        <td>FEEB</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8C</td>
+        <td>J▸</td>
+        <td></td>
+        <td>FE9C</td>
+        <td>lx▸ph</td>
+        <td></td>
+        <td>FEAC</td>
+        <td>m▸</td>
+        <td></td>
+        <td>FEBC</td>
+        <td>L▸</td>
+        <td></td>
+        <td>FECC</td>
+        <td></td>
+        <td></td>
+        <td>FEDC</td>
+        <td></td>
+        <td></td>
+        <td>FEEC</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8D</td>
+        <td>P▸Pa*s</td>
+        <td></td>
+        <td>FE9D</td>
+        <td>Ci▸Bq</td>
+        <td></td>
+        <td>FEAD</td>
+        <td>▸m</td>
+        <td></td>
+        <td>FEBD</td>
+        <td>▸cm³</td>
+        <td></td>
+        <td>FECD</td>
+        <td></td>
+        <td></td>
+        <td>FEDD</td>
+        <td></td>
+        <td></td>
+        <td>FEED</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8E</td>
+        <td>Pa*s▸P</td>
+        <td></td>
+        <td>FE9E</td>
+        <td>Bq▸Ci</td>
+        <td></td>
+        <td>FEAE</td>
+        <td>m▸</td>
+        <td></td>
+        <td>FEBE</td>
+        <td>cm³▸</td>
+        <td></td>
+        <td>FECE</td>
+        <td></td>
+        <td></td>
+        <td>FEDE</td>
+        <td></td>
+        <td></td>
+        <td>FEEE</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr class="hlfontcwxtableFE">
+        <td>FE8F</td>
+        <td>St▸m²/s</td>
+        <td></td>
+        <td>FE9F</td>
+        <td>rad▸Gy</td>
+        <td></td>
+        <td>FEAF</td>
+        <td>▸km</td>
+        <td></td>
+        <td>FEBF</td>
+        <td>▸L</td>
+        <td></td>
+        <td>FECF</td>
+        <td>▸m²</td>
+        <td></td>
+        <td>FEDF</td>
+        <td>ft▸in</td>
+        <td></td>
+        <td>FEEF</td>
+        <td>ₑ</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+</html>

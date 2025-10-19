@@ -1,0 +1,3 @@
+Even though there is ClassWiz X font using to some char, i suggest you dont need to copy some char that is not display normal in normal font because these char are for the font applied use only and even F010 that look like a cchar but in cwx font well it the codepoint F010 in unicode like this
+ 
+not the c in the 0x-- table
