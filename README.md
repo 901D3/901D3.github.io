@@ -7,7 +7,6 @@ A tool for video dithering\
 [github.com/901D3/freevideodither](https://github.com/901D3/freevideodither)\
 [901d3.github.io/freevideodither/](https://901d3.github.io/freevideodither)
 
-
 2. _**freeimagedither**_\
 A tool for image dithering\
 [github.com/901D3/freeimagedither](https://github.com/901D3/freeimagedither)\
