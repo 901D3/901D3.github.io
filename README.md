@@ -28,4 +28,4 @@ Pack Source 1 Panorama into a valid .pbin file\
 
 ---
 
-_The license on this repository does not mean all repository listed above uses it_
+_The license on this repository does not mean that all repositories listed above or any of my repositories use it_
