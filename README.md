@@ -22,7 +22,11 @@ Free JS implementation of Void and Cluster method by Robert Ulichney and other m
 [github.com/901D3/blue-noise.js](https://github.com/901D3/blue-noise.js)\
 [901d3.github.io/blue-noise.js](https://901d3.github.io/blue-noise.js)
 
-5. _**PBIN-Packer**_\
+5. _**WebM-muxer.js**_\
+A simple and lightweight WebM muxer written in JS\
+[github.com/901D3/WebM-muxer.js](https://github.com/901D3/WebM-muxer.js)
+
+6. _**PBIN-Packer**_\
 Pack Source 1 Panorama into a valid .pbin file\
 [github.com/901D3/PBIN-Packer](https://github.com/901D3/PBIN-Packer)
 
