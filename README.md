@@ -1,7 +1,5 @@
 # _**901D3's website**_
 
-Mostly my tools and stuff. im lazy to rewrite home/index.html so i put all of my tool links below
-
 1. _**freevideodither**_\
 A tool for video dithering\
 [github.com/901D3/freevideodither](https://github.com/901D3/freevideodither)\
@@ -27,12 +25,11 @@ Dedicated tool for testing dithering algorithms and methods\
 [github.com/901D3/arbit-dither](https://github.com/901D3/arbit-dither)\
 [901d3.github.io/arbit-dither](https://901d3.github.io/arbit-dither)
 
-
-8. _**WebM-muxer.js**_\
+7. _**WebM-muxer.js**_\
 A simple and lightweight WebM muxer written in JS\
 [github.com/901D3/WebM-muxer.js](https://github.com/901D3/WebM-muxer.js)
 
-9. _**PBIN-Packer**_\
+8. _**PBIN-Packer**_\
 Pack Source 1 Panorama into a valid .pbin file\
 [github.com/901D3/PBIN-Packer](https://github.com/901D3/PBIN-Packer)
 
