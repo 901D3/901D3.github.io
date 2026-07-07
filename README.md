@@ -33,6 +33,6 @@ A simple and lightweight WebM muxer written in JS\
 Pack Source 1 Panorama into a valid .pbin file\
 [github.com/901D3/PBIN-Packer](https://github.com/901D3/PBIN-Packer)
 
-──────────
+---
 
 _The license on this repository does not mean that all repositories listed above or any of my repositories use it_
